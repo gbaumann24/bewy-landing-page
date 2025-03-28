@@ -1,5 +1,5 @@
 import { H1, P } from '@/lib/typography';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import DotBackground from '../ui/dot-bg';
 import { Building2, KeyRound } from 'lucide-react';
 import { MietAccordion } from '../ui/miet-accordion';
@@ -7,12 +7,73 @@ import { StweAccordion } from '../ui/stwe-accordion';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FeatureSection: React.FC = () => {
-	const [accordionItem, setAccordionItem] = React.useState('item-1');
-	const [type, setType] = React.useState('Miet');
+	const [accordionItem, setAccordionItem] = useState('item-1');
+	const [type, setType] = useState('Miet');
+	const [progress, setProgress] = useState(0);
+	const [isPaused, setIsPaused] = useState(false);
+	const [isTransitioning, setIsTransitioning] = useState(false);
+	const nextItemRef = useRef<string | null>(null);
+	const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+	// Define the item sequences
+	const mietItems = ['item-1', 'item-2', 'item-3', 'item-4', 'item-5'];
+	const stweItems = ['item-1', 'item-2', 'item-4'];
 
 	useEffect(() => {
 		setAccordionItem('item-1');
+		setProgress(0);
 	}, [type]);
+
+	useEffect(() => {
+		// Only run autoplay if not paused and not transitioning
+		if (!isPaused && !isTransitioning) {
+			const itemList = type === 'Miet' ? mietItems : stweItems;
+
+			// Clear any existing interval
+			if (intervalRef.current) {
+				clearInterval(intervalRef.current);
+			}
+
+			const interval = 50;
+			const totalTime = 5000;
+			const increment = (interval / totalTime) * 100;
+
+			intervalRef.current = setInterval(() => {
+				setProgress((prev) => {
+					if (prev >= 100) {
+						// When reaching 100%, start transition
+						const currentIndex = itemList.indexOf(accordionItem);
+						const nextIndex = (currentIndex + 1) % itemList.length;
+						nextItemRef.current = itemList[nextIndex];
+						
+						// First close current item
+						setIsTransitioning(true);
+						setAccordionItem('');
+						
+						// Schedule opening of next item after a short delay
+						setTimeout(() => {
+							if (nextItemRef.current) {
+								setAccordionItem(nextItemRef.current);
+								nextItemRef.current = null;
+							}
+							setIsTransitioning(false);
+						}, 300); // Matching your animation duration
+						
+						return 0;
+					}
+					return prev + increment;
+				});
+			}, interval);
+		} else if (intervalRef.current && (isPaused || isTransitioning)) {
+			clearInterval(intervalRef.current);
+		}
+
+		return () => {
+			if (intervalRef.current) {
+				clearInterval(intervalRef.current);
+			}
+		};
+	}, [accordionItem, type, isPaused, isTransitioning]);
 
 	// Function to determine which image to display
 	const getImageSrc = () => {
@@ -30,8 +91,26 @@ const FeatureSection: React.FC = () => {
 		return '';
 	};
 
+	const handleManualItemChange = (item: string) => {
+		// For manual changes, also implement the close-then-open pattern
+		if (item !== accordionItem) {
+			nextItemRef.current = item;
+			setIsTransitioning(true);
+			setAccordionItem('');
+			
+			setTimeout(() => {
+				if (nextItemRef.current) {
+					setAccordionItem(nextItemRef.current);
+					nextItemRef.current = null;
+				}
+				setIsTransitioning(false);
+			}, 300);
+		}
+		setProgress(0);
+	};
+
 	return (
-		<div className=" container mx-auto h-dvh flex items-center justify-center gap-24">
+		<div className="container mx-auto min-h-vh flex items-center justify-center gap-24">
 			{/* Left Column - Content */}
 			<div className="flex flex-col flex-1 h-full justify-center">
 				<div className="items-center mb-10 flex flex-row h-fit gap-4">
@@ -55,11 +134,14 @@ const FeatureSection: React.FC = () => {
 					</button>
 				</div>
 				<H1 className="mb-6">{type === 'Miet' ? 'Die Zukunft des Mieteigentums' : 'Die Zukunft des Stockwerkeigentums'}</H1>
-				{type === 'Miet' ? (
-					<MietAccordion accordionItem={accordionItem} setAccordionItem={setAccordionItem} />
-				) : (
-					<StweAccordion accordionItem={accordionItem} setAccordionItem={setAccordionItem} />
-				)}
+
+				<div onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+					{type === 'Miet' ? (
+						<MietAccordion accordionItem={accordionItem} setAccordionItem={handleManualItemChange} progress={progress} />
+					) : (
+						<StweAccordion accordionItem={accordionItem} setAccordionItem={handleManualItemChange} progress={progress} />
+					)}
+				</div>
 			</div>
 
 			{/* Right Column - Image */}

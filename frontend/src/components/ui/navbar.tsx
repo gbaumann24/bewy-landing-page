@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
 	return (
 		<motion.nav
-			className={`fixed w-full z-50 transition-colors duration-300  backdrop-blur-md bg-white/90 `}
+			className={`fixed w-full z-50 transition-colors duration-300  backdrop-blur-md bg-white/80 `}
 			style={{
 				width: scrolled ? width : '100%',
 				y: scrolled ? y : 0,

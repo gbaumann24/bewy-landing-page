@@ -5,7 +5,7 @@ export function H1({ children, className }: { children: React.ReactNode; classNa
 }
 
 export function H2({ children, className }: { children: React.ReactNode; className?: string }) {
-	return <h2 className={cn('scroll-m-20 text-4xl font-semibold leading-14 tracking-normal lg:text-5xl', className)}>{children}</h2>;
+	return <h2 className={cn('scroll-m-20 text-2xl font-semibold leading-13 tracking-normal lg:text-5xl', className)}>{children}</h2>;
 }
 
 export function H3({ children, className }: { children: React.ReactNode; className?: string }) {

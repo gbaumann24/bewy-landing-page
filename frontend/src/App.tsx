@@ -28,8 +28,9 @@ const App: React.FC = () => {
 			<section>
 				<FeatureSection />
 			</section>
-			<section className="bg-secondary">
+			<section className="relative overflow-clip bg-secondary">
 				<CTA />
+				<img src="assets/pattern-2.webp" alt="" className="absolute -right-40 scale-200 h-full opacity-70 top-30 overflow-visible " />
 			</section>
 			<section>
 				<OnboardingSection />

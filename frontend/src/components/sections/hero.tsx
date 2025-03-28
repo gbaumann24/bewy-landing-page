@@ -39,38 +39,50 @@ const HeroSection: React.FC = () => {
 					{/* Base image */}
 					<img src="/assets/hero-0.webp" alt="Hero Image" className="h-3/4" />
 
-					{/* Overlay images */}
+					{/* Overlay images with sequential entrance */}
 					<motion.img
 						src="/assets/hero-1.svg"
 						alt="Overlay 1"
 						className="absolute w-60 top-[10%] left-[20%]"
-						initial={{ y: 0 }}
-						animate={{ y: [-8, 8, -8] }}
-						transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+						initial={{ y: 50, opacity: 0 }}
+						animate={{ y: [-8, 8, -8], opacity: 1 }}
+						transition={{ 
+							opacity: { duration: 0.5, delay: 0.3 },
+							y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 }
+						}}
 					/>
 					<motion.img
 						src="/assets/hero-2.svg"
 						alt="Overlay 2"
-						className="absolute w-60  top-[10%] right-[0%]"
-						initial={{ y: 0 }}
-						animate={{ y: [-10, 6, -10] }}
-						transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+						className="absolute w-60 top-[10%] right-[0%]"
+						initial={{ y: 50, opacity: 0 }}
+						animate={{ y: [-10, 6, -10], opacity: 1 }}
+						transition={{ 
+							opacity: { duration: 0.5, delay: 0.6 },
+							y: { repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 0.6 }
+						}}
 					/>
 					<motion.img
 						src="/assets/hero-3.svg"
 						alt="Overlay 3"
 						className="absolute w-100 bottom-[25%] left-[40%]"
-						initial={{ y: 0 }}
-						animate={{ y: [5, -8, 5] }}
-						transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut' }}
+						initial={{ y: 50, opacity: 0 }}
+						animate={{ y: [5, -8, 5], opacity: 1 }}
+						transition={{ 
+							opacity: { duration: 0.5, delay: 0.9 },
+							y: { repeat: Infinity, duration: 4.5, ease: 'easeInOut', delay: 0.9 }
+						}}
 					/>
 					<motion.img
 						src="/assets/hero-4.svg"
 						alt="Overlay 4"
-						className="absolute  bottom-[45%] right-[25%]"
-						initial={{ y: 0 }}
-						animate={{ y: [-7, 7, -7] }}
-						transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut' }}
+						className="absolute bottom-[45%] right-[25%]"
+						initial={{ y: 50, opacity: 0 }}
+						animate={{ y: [-7, 7, -7], opacity: 1 }}
+						transition={{ 
+							opacity: { duration: 0.5, delay: 1.2 },
+							y: { repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 1.2 }
+						}}
 					/>
 				</div>
 			</div>

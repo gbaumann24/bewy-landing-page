@@ -31,9 +31,24 @@ function AccordionTrigger({ className, children, ...props }: React.ComponentProp
 	);
 }
 
-function AccordionContent({ className, children, ...props }: React.ComponentProps<typeof AccordionPrimitive.Content>) {
+type AccordionContentProps = React.ComponentProps<typeof AccordionPrimitive.Content> & {
+	progress: number;
+};
+
+function AccordionContent({ progress, className, children, ...props }: AccordionContentProps) {
+	console.log('AccordionContent', progress);
 	return (
-		<AccordionPrimitive.Content data-slot="accordion-content" className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm" {...props}>
+		<AccordionPrimitive.Content
+			data-slot="accordion-content"
+			className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm flex "
+			{...props}
+		>
+			{/* Progress Bar */}
+			<div className="flex flex-col items-center justify-center pt-2 pb-5 ">
+				<div className="h-full w-1 bg-gray-200 rounded-full mr-4">
+					<div className="bg-secondary w-full rounded-full transition-all duration-100 ease-linear" style={{ height: `${progress}%` }} />
+				</div>
+			</div>
 			<P className={cn('pt-0 pb-4 text-muted-foreground', className)}>{children}</P>
 		</AccordionPrimitive.Content>
 	);
