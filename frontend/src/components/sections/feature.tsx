@@ -141,7 +141,7 @@ const FeatureSection: React.FC = () => {
 	};
 
 	return (
-		<div ref={sectionRef} className="container mx-auto h-vh flex items-center justify-center gap-24">
+		<div ref={sectionRef} className="container mx-auto h-dvh flex items-center justify-center gap-24">
 			{/* Left Column - Content */}
 			<div className="flex flex-col flex-1 h-full justify-center">
 				<div className="items-center mb-6 flex flex-row h-fit w-fit rounded-xl  bg-accent p-1 gap-1">
@@ -178,7 +178,7 @@ const FeatureSection: React.FC = () => {
 			{/* Right Column - Image */}
 			<div className="relative flex-1 h-full overflow-hidden flex items-center justify-center">
 				<DotBackground />
-				<AnimatePresence mode="wait">
+				<AnimatePresence mode="wait" >
 					<motion.img
 						key={`${type}-${accordionItem}`}
 						src={getImageSrc()}
