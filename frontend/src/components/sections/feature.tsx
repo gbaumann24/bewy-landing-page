@@ -1,4 +1,4 @@
-import { ButtonText, H1, P } from '@/lib/typography';
+import { ButtonText, H1 } from '@/lib/typography';
 import React, { useEffect, useState, useRef } from 'react';
 import DotBackground from '../ui/dot-bg';
 import { Building2, KeyRound } from 'lucide-react';

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './button';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ButtonText } from '@/lib/typography';
 
@@ -38,7 +37,6 @@ const Navbar: React.FC<NavbarProps> = ({
 	const width = useTransform(scrollY, [0, 100], ['100%', '85%']);
 	const y = useTransform(scrollY, [0, 100], [0, 14]);
 	const scale = useTransform(scrollY, [0, 100], [1, 0.98]);
-	const opacity = useTransform(scrollY, [0, 100], [0, 1]);
 	const borderRadius = useTransform(scrollY, [0, 100], [100, 100]);
 
 	useEffect(() => {
@@ -63,7 +61,6 @@ const Navbar: React.FC<NavbarProps> = ({
 	}, [activeView]);
 
 	const textColor = variant === 'light' ? 'text-gray-800' : 'text-white';
-	const bgColor = variant === 'light' ? (scrolled ? 'bg-white' : 'bg-transparent') : scrolled ? 'bg-gray-900' : 'bg-transparent';
 
 	return (
 		<motion.nav

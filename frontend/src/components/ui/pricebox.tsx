@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2, H3, H4, P } from '@/lib/typography';
+import { H4, P } from '@/lib/typography';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';

@@ -1,7 +1,6 @@
-import { ButtonText, H1, P } from '@/lib/typography';
+import { H1, P } from '@/lib/typography';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { Button } from '../ui/button';
 
 const DashboardSection: React.FC = () => {
 	return (

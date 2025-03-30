@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { P } from '@/lib/typography';
 import { cn } from '@/lib/utils';
 
 type MietAccordionProps = {

@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { H1, P } from '@/lib/typography';
+import React from 'react';
+import { H1} from '@/lib/typography';
 import { Step } from '../ui/step';
-import { Button } from '../ui/button';
 import { Handshake, MapPinHouse, Star, TrendingUp } from 'lucide-react';
 
 const OnboardingSection: React.FC = () => {
@@ -35,7 +33,6 @@ const OnboardingSection: React.FC = () => {
 					title="Übergabe & Steuerung im Eigentümerportal"
 					description="Alle Daten fliessen ins Bewy-Portal. Dort steuern und überwachen Sie Ihre Liegenschaft digital – mit voller Transparenz und jederzeitem Zugriff."
 				/>
-				
 			</div>
 		</div>
 	);

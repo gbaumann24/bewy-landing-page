@@ -1,6 +1,6 @@
 import { ButtonText, H1 } from '@/lib/typography';
 import React from 'react';
-import { P, H2 } from '../../lib/typography';
+import { P} from '../../lib/typography';
 import PricingCard from '../ui/pricebox';
 import { Building2, KeyRound } from 'lucide-react';
 

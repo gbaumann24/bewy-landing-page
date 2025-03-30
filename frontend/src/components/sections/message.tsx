@@ -1,4 +1,3 @@
-import { H1 } from '@/lib/typography';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import React from 'react';
 
