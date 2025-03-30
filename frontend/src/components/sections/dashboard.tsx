@@ -1,6 +1,7 @@
-import { H1, P } from '@/lib/typography';
+import { ButtonText, H1, P } from '@/lib/typography';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { Button } from '../ui/button';
 
 const DashboardSection: React.FC = () => {
 	return (
@@ -13,6 +14,9 @@ const DashboardSection: React.FC = () => {
 					Zustandsanalysen und STWE-Protokollen bis hin zu laufenden Vorgängen wie Mieterwechsel und Sanierungen. So behalten Sie stets die Übersicht und können bei Bedarf
 					fundierte Entscheidungen treffen, ohne sich um die Details kümmern zu müssen.
 				</P>
+				{/* <button className="flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-lg">
+					<ButtonText>Mehr Erfahren</ButtonText>
+				</button> */}
 			</div>
 
 			{/* Right Column - Image */}

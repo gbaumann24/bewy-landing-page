@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 
 const DotBackground: React.FC = () => {
 	return (
-		<div className="absolute inset-0 opacity-70 -z-50">
+		<div className="absolute inset-0 opacity-100 -z-50">
 			<div
 				className={cn(
 					'absolute inset-0',
@@ -13,7 +13,7 @@ const DotBackground: React.FC = () => {
 				)}
 			/>
 			{/* Radial gradient for the container to give a faded look */}
-			<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+			<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_30%,black)] dark:bg-black"></div>
 		</div>
 	);
 };

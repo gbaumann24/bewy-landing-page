@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './button';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ButtonText } from '@/lib/typography';
 
 interface NavItem {
 	label: string;
@@ -10,23 +11,28 @@ interface NavItem {
 
 interface NavbarProps {
 	logo?: React.ReactNode;
-	items?: NavItem[];
+	setView: React.Dispatch<React.SetStateAction<string>>;
+	itemsinits?: NavItem[];
 	variant?: 'light' | 'dark';
+	activeView: string;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
 	logo,
-	items = [
-		{ label: 'Home', href: '/' },
-		{ label: 'Cockpit', href: '/about' },
-		{ label: 'Eigentümerportal', href: '/services' },
-		{ label: 'So funktioniert`s', href: '/contact' },
+	itemsinits = [
+		{ label: 'Home', href: 'home', isActive: true },
+		{ label: 'Eigentümerportal', href: 'portal', isActive: false },
+		{ label: 'So funktioniert`s', href: 'onboarding', isActive: false },
+		{ label: 'Preise', href: 'pricing', isActive: false },
 	],
 	variant = 'light',
+	setView,
+	activeView,
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	const { scrollY } = useScroll();
+	const [items, setItems] = useState(itemsinits);
 
 	// Transform values for floating effect
 	const width = useTransform(scrollY, [0, 100], ['100%', '85%']);
@@ -44,12 +50,24 @@ const Navbar: React.FC<NavbarProps> = ({
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	// Fix for isActive logic
+	useEffect(() => {
+		if (activeView) {
+			// Create a new array with updated isActive states
+			const updatedItems = items.map((item) => ({
+				...item,
+				isActive: item.href === activeView,
+			}));
+			setItems(updatedItems);
+		}
+	}, [activeView]);
+
 	const textColor = variant === 'light' ? 'text-gray-800' : 'text-white';
 	const bgColor = variant === 'light' ? (scrolled ? 'bg-white' : 'bg-transparent') : scrolled ? 'bg-gray-900' : 'bg-transparent';
 
 	return (
 		<motion.nav
-			className={`fixed w-full z-50 transition-colors duration-300  backdrop-blur-md bg-white/80 `}
+			className={`fixed w-full z-50 transition-colors duration-300 backdrop-blur-md bg-white/80 `}
 			style={{
 				width: scrolled ? width : '100%',
 				y: scrolled ? y : 0,
@@ -61,7 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({
 			initial={false}
 		>
 			<motion.div className="container mx-auto px-1" style={{ scale: scrolled ? scale : 1 }}>
-				<div className="flex justify-between items-center py-2">
+				<div className="flex justify-between items-center py-3">
 					{/* Logo */}
 					<div className="flex-shrink-0">
 						{logo || (
@@ -74,11 +92,19 @@ const Navbar: React.FC<NavbarProps> = ({
 					{/* Desktop Menu */}
 					<div className="hidden md:flex items-center space-x-8">
 						{items.map((item) => (
-							<a key={item.label} href={item.href} className={`${textColor} hover:text-secondary text-[15px] transition-colors ${item.isActive ? 'font-medium' : ''}`}>
+							<div
+								key={item.label}
+								className={`${textColor} cursor-pointer hover:text-secondary text-[15px] transition-colors ${item.isActive ? 'font-medium text-secondary' : ''}`}
+								onClick={() => setView(item.href)}
+							>
 								{item.label}
-							</a>
+							</div>
 						))}
-						<Button className="text-[15px] px-10 h-11 cursor-pointer bg-secondary text-white rounded-full hover:bg-secondary transition-colors">Kontakt</Button>
+						<button
+							className={`text-[15px] px-10 h-11 cursor-pointer bg-secondary text-white hover:bg-secondary transition-colors ${scrolled ? 'rounded-full' : ' rounded-xl'}`}
+						>
+							<ButtonText>Kontakt</ButtonText>{' '}
+						</button>
 					</div>
 				</div>
 
@@ -91,9 +117,13 @@ const Navbar: React.FC<NavbarProps> = ({
 						{items.map((item) => (
 							<a
 								key={item.label}
-								href={item.href}
-								className={`block px-3 py-2 rounded ${textColor} hover:text-secondary hover:bg-gray-100`}
-								onClick={() => setIsOpen(false)}
+								href={`#${item.href}`}
+								className={`block px-3 py-2 rounded ${textColor} hover:text-secondary hover:bg-gray-100 ${item.isActive ? 'font-medium text-secondary' : ''}`}
+								onClick={(e) => {
+									e.preventDefault();
+									setView(item.href);
+									setIsOpen(false);
+								}}
 							>
 								{item.label}
 							</a>

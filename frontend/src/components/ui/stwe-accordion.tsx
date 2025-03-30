@@ -19,7 +19,7 @@ export const StweAccordion: React.FC<MietAccordionProps> = ({ progress, accordio
 			}}
 			value={accordionItem}
 		>
-			<AccordionItem value="item-1">
+			<AccordionItem value="item-1" className={cn('w-full', accordionItem === 'item-1' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Zustand, Wartung und Werterhalt</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Bewy überwacht den baulichen Zustand Ihrer STWE-Liegenschaft kontinuierlich und erkennt notwendige Massnahmen frühzeitig. Anstehende Fälligkeiten werden automatisch
@@ -27,21 +27,21 @@ export const StweAccordion: React.FC<MietAccordionProps> = ({ progress, accordio
 					dabei einen umfassenden Überblick und schaffen eine gemeinsame Informationsbasis für alle Beteiligten – transparent, vorausschauend und effizient.
 				</AccordionContent>
 			</AccordionItem>
-			<AccordionItem value="item-2">
+			<AccordionItem value="item-2" className={cn('w-full', accordionItem === 'item-2' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Versammlungen transparent dokummentiert</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Ob online oder vor Ort – mit Bewy steuern Sie Eigentümerversammlungen effizient und transparent. Von der Einreichung der Traktanden über die Abstimmung bis zum
 					unterzeichneten Protokoll läuft der gesamte Prozess digital und nachvollziehbar. Alle Unterlagen und Beschlüsse sind zentral archiviert und jederzeit einsehbar.
 				</AccordionContent>
 			</AccordionItem>
-			<AccordionItem value="item-3">
+			<AccordionItem value="item-3" className={cn('w-full', accordionItem === 'item-3' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Finanzen jederzeit im Griff</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Mit Bewy behalten alle Eigentümer den Überblick über Budget, Rücklagen, laufende Kosten und Abrechnungen. Finanzdaten sind in Echtzeit einsehbar, übersichtlich
 					aufbereitet und bereit zum Download. Vom Jahresabschluss bis zur individuellen Kostenverteilung – alle Zahlen sind nachvollziehbar dokumentiert und zentral verfügbar.
 				</AccordionContent>
 			</AccordionItem>
-			<AccordionItem value="item-4">
+			<AccordionItem value="item-4" className={cn('w-full', accordionItem === 'item-4' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Bewy AI</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Bewy AI ist ein zentraler, KI-basierter Chatbot. Er beantwortet Fragen zu Objekten, Finanzen, Versammlungen oder Dokumenten – sofort, zuverlässig und rund um die Uhr. So
