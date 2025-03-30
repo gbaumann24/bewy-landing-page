@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ButtonText, H2, P } from '@/lib/typography';
-import { HoverBorderGradientDemo } from '../ui/hover-button';
-import { H4 } from '../../lib/typography';
+
 
 const CTA: React.FC = () => {
 	return (
