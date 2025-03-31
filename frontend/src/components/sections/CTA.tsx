@@ -7,7 +7,7 @@ const CTA: React.FC = () => {
 		<div className="container mx-auto h-85 flex items-center justify-center gap-24 overflow-clip">
 			{/* Left Column - Image */}
 			<div className="flex-1">
-				<H2 className="text-white">Haben wir Ihr Interesse?</H2>
+				<H2 className="text-white">Interesse geweckt?</H2>
 				<P className="text-white opacity-90 mt-5">
 					Bewy ist die digitale Lösung für Ihre Immobilienverwaltung. Wir helfen Ihnen, Ihre Prozesse zu vereinfachen, Zeit zu sparen und Ihre Effizienz zu steigern.
 				</P>

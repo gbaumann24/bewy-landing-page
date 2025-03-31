@@ -61,7 +61,7 @@ const App: React.FC = () => {
 			<section>
 				<MessageSection />
 			</section>
-			<section className="portal">
+			<section className="portal relative">
 				<DashboardSection />
 				<FeatureSection />
 			</section>

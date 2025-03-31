@@ -16,7 +16,7 @@ const ValuesSection: React.FC = () => {
 	};
 
 	return (
-		<div className="container mx-auto flex items-center justify-center gap-10 py-12">
+		<div className="container mx-auto flex items-start justify-center gap-10 py-12">
 			<motion.div 
 				className="flex flex-col items-start justify-center border-t pt-5"
 				variants={valueVariants}

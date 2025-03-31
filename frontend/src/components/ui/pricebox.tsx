@@ -53,7 +53,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 							<ul className="text-xs ml-2 space-y-1 mt-1">
 								{vorOrt.map((item, index) => (
 									<li key={index} className="flex items-center">
-										<Check className="mr-2 text-muted-foreground" size={'14px'} />
+										<Check className="mr-1 text-muted-foreground" size={'14px'} />
 										<span className="text-muted-foreground">{item}</span>
 									</li>
 								))}
@@ -66,7 +66,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 							<ul className=" text-xs ml-2 space-y-1 mt-1">
 								{mieterkommunikation?.map((item, index) => (
 									<li key={index} className="flex items-center">
-										<Check className="mr-2 text-muted-foreground" size={'14px'} />
+										<Check className="mr-1 text-muted-foreground" size={'14px'} />
 										<span className="text-muted-foreground">{item}</span>
 									</li>
 								))}
@@ -80,7 +80,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 								<ul className=" text-xs ml-2 space-y-1 mt-1">
 									{eigentuemerkommunikation?.map((item, index) => (
 										<li key={index} className="flex items-center">
-											<Check className=" mr-2 text-muted-foreground" size={'14px'} />
+											<Check className=" mr-1 text-muted-foreground" size={'14px'} />
 											<span className="text-muted-foreground">{item}</span>
 										</li>
 									))}
@@ -94,7 +94,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 							<ul className=" text-xs ml-2 space-y-1 mt-1">
 								{portal.map((item, index) => (
 									<li key={index} className="flex items-center">
-										<Check className=" mr-2 text-muted-foreground" size={'14px'} />
+										<Check className=" mr-1 text-muted-foreground" size={'14px'} />
 										<span className="text-muted-foreground">{item}</span>
 									</li>
 								))}
@@ -108,7 +108,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 								<ul className=" text-xs ml-2 space-y-1 mt-1">
 									{versammlung?.map((item, index) => (
 										<li key={index} className="flex items-center">
-											<Check className=" mr-2 text-muted-foreground" size={'14px'} />
+											<Check className=" mr-1 text-muted-foreground" size={'14px'} />
 											<span className="text-muted-foreground">{item}</span>
 										</li>
 									))}
@@ -122,7 +122,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 							<P className="text-muted-foreground text-xs ml-2">
 								{mieterHandwerkerWahl?.map((item, index) => (
 									<li key={index} className="flex items-center">
-										<Check className=" mr-2 text-muted-foreground" size={'14px'} />
+										<Check className=" mr-1 text-muted-foreground" size={'14px'} />
 										<span className="text-muted-foreground">{item}</span>
 									</li>
 								))}
