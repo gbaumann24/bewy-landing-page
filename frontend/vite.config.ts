@@ -8,6 +8,10 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig({
 	plugins: [react(), tailwindcss(), svgr()],
+	server: {
+		host: true, // or '0.0.0.0'
+		port: 5173, // or your preferred port
+	},
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, './src'),

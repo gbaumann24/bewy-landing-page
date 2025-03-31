@@ -1,6 +1,6 @@
 import { ButtonText, H1 } from '@/lib/typography';
 import React from 'react';
-import { P} from '../../lib/typography';
+import { P } from '../../lib/typography';
 import PricingCard from '../ui/pricebox';
 import { Building2, KeyRound } from 'lucide-react';
 
@@ -36,7 +36,7 @@ const Pricing: React.FC = () => {
 			</div>
 
 			{type === 'Miet' && (
-				<div className="flex flex-row items-start justify-center gap-12 w-full">
+				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 w-full">
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
 						title="Kompakt"

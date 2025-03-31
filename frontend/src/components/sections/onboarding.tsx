@@ -1,11 +1,11 @@
 import React from 'react';
-import { H1} from '@/lib/typography';
+import { H1 } from '@/lib/typography';
 import { Step } from '../ui/step';
 import { Handshake, MapPinHouse, Star, TrendingUp } from 'lucide-react';
 
 const OnboardingSection: React.FC = () => {
 	return (
-		<div className="container mx-auto h-dvh  flex items-center justify-center gap-12">
+		<div className="container mx-auto h-lvh  flex items-center justify-center gap-12">
 			{/* Right Column - Image */}
 			<div className="flex-1 bg-transparent h-3/4">
 				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-4xl" />

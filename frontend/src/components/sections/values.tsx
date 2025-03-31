@@ -16,23 +16,23 @@ const ValuesSection: React.FC = () => {
 	};
 
 	return (
-		<div className="container mx-auto flex items-start justify-center gap-10 py-12">
-			<motion.div 
-				className="flex flex-col items-start justify-center border-t pt-5"
+		<div className="container mx-auto flex xs:flex-col items-start justify-center gap-10 py-12">
+			<motion.div
+				className="flex flex-col items-start justify-center border-t pt-5 xs:border-none xs:pt-10"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
 				custom={0}
 			>
-				<Database />
+				<Database className="xs:w" />
 				<H4 className="text-secondary mt-3 mb-4">Transparent</H4>
 				<P className="text-muted-foreground">
 					Unser Eigentümerportal ermöglicht Ihnen jederzeit Einblick in aktuelle Vorgänge & Zahlen – strukturiert, nachvollziehbar und in Echtzeit.
 				</P>
 			</motion.div>
-			<motion.div 
-				className="flex flex-col items-start justify-center border-t pt-5"
+			<motion.div
+				className="flex flex-col items-start justify-center border-t pt-5 xs:pt-10"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -43,8 +43,9 @@ const ValuesSection: React.FC = () => {
 				<H4 className="text-secondary mt-3 mb-4">Wertstiftend</H4>
 				<P className="text-muted-foreground">Wir begleiten Sie mit fundierter Analyse, sorgfältiger Planung und einem klaren Blick auf den gesamten Lebenszyklus Ihrer Immobilie.</P>
 			</motion.div>
-			<motion.div 
-				className="flex flex-col items-start justify-center border-t pt-5"
+
+			<motion.div
+				className="flex flex-col items-start justify-center border-t pt-5 xs:pt-10"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -55,8 +56,9 @@ const ValuesSection: React.FC = () => {
 				<H4 className="text-secondary mt-3 mb-4">Kompetent</H4>
 				<P className="text-muted-foreground">Wir bringen komplexe Themen auf den Punkt und begleiten Sie mit fundierten Analysen und lösungsorientierter Beratung.</P>
 			</motion.div>
-			<motion.div 
-				className="flex flex-col items-start justify-center border-t pt-5"
+
+			<motion.div
+				className="flex flex-col items-start justify-center border-t pt-5 xs:pt-10"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"

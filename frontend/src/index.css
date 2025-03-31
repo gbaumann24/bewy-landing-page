@@ -3,6 +3,10 @@
 @import 'tw-animate-css';
 @custom-variant dark (&:is(.dark *));
 
+.container {
+	@apply xs:px-3;
+}
+
 :root {
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
