@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
 	return (
-		<div className="relative container mx-auto overflow-clip h-dvh flex flex-col sm:flex-row items-center justify-center gap-12">
+		<div className="relative container mx-auto overflow-clip h-dvh flex items-center justify-center gap-12">
 			{/* Grid Background */}
 			<GridBackground />
 
@@ -34,9 +34,9 @@ const HeroSection: React.FC = () => {
 
 			{/* Right Column - Image */}
 			<div className="relative z-10 flex-1 h-full">
-				<div className="relative h-full w-full flex items-center justify-center scale-90 xl:scale-100">
+				<div className="relative h-full w-full flex items-center justify-center  xl:scale-90">
 					{/* Base image */}
-					<img src="/assets/hero-0.webp" alt="Hero Image" className="h-3/4" />
+					<img src="/assets/hero-0.webp" alt="Hero Image" className="h-3/4 object-cover w-4/5 xl:w-full rounded-2xl" />
 
 					{/* Overlay images with sequential entrance */}
 					<div className="absolute top-[10%] right-[0%] flex items-center justify-end gap-4 w-full h-fit">

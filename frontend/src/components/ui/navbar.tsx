@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({
 	const [items, setItems] = useState(itemsinits);
 
 	// Transform values for floating effect
-	const width = useTransform(scrollY, [0, 100], ['100%', '85%']);
+	const width = useTransform(scrollY, [0, 100], ['100%', '80%']);
 	const y = useTransform(scrollY, [0, 100], [0, 14]);
 	const scale = useTransform(scrollY, [0, 100], [1, 0.98]);
 	const borderRadius = useTransform(scrollY, [0, 100], [100, 100]);
@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
 	return (
 		<motion.nav
-			className={`fixed w-full z-50 transition-colors duration-300 backdrop-blur-md bg-white/80 `}
+			className={`fixed container z-50 transition-colors duration-300 backdrop-blur-md bg-white/80 `}
 			style={{
 				width: scrolled ? width : '100%',
 				y: scrolled ? y : 0,
@@ -87,7 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({
 					</div>
 
 					{/* Desktop Menu */}
-					<div className="hidden md:flex items-center space-x-8">
+					<div className="flex items-center space-x-8">
 						{items.map((item) => (
 							<div
 								key={item.label}
@@ -103,33 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({
 							<ButtonText>Kontakt</ButtonText>{' '}
 						</button>
 					</div>
-				</div>
-
-				{/* Mobile Menu */}
-				<motion.div
-					className={`${isOpen ? 'block' : 'hidden'} md:hidden mt-4 ${variant === 'light' ? 'bg-white' : 'bg-gray-900'} rounded-lg`}
-					style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}
-				>
-					<div className="px-2 pt-2 pb-3 space-y-1">
-						{items.map((item) => (
-							<a
-								key={item.label}
-								href={`#${item.href}`}
-								className={`block px-3 py-2 rounded ${textColor} hover:text-secondary hover:bg-gray-100 ${item.isActive ? 'font-medium text-secondary' : ''}`}
-								onClick={(e) => {
-									e.preventDefault();
-									setView(item.href);
-									setIsOpen(false);
-								}}
-							>
-								{item.label}
-							</a>
-						))}
-						<div className="px-3 py-3">
-							<button className="w-full px-4 py-2 bg-secondary text-white rounded-full hover:bg-secondary transition-colors">Get Started</button>
-						</div>
-					</div>
-				</motion.div>
+				</div>{' '}
 			</motion.div>
 		</motion.nav>
 	);

@@ -27,9 +27,9 @@ const DashboardSection: React.FC = () => {
 			{/* Right Column - Image */}
 
 			<motion.img
-				src="/assets/dashboard.webp"
+				src="/assets/dashboard_2.webp"
 				alt="Dashboard Image"
-				className="absolute w-1/2 top-1/2 -translate-y-1/2 right-0 object-cover object-left overflow-visible bg-transparent rounded-l-4xl"
+				className="absolute w-1/2 h-3/4 top-1/2 -translate-y-1/2 right-0 object-cover object-left overflow-visible bg-transparent rounded-l-4xl"
 				style={{
 					boxShadow: '0 -5px 33px 1px rgba(12, 12, 13, 0.1)',
 				}}
