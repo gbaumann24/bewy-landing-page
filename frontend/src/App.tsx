@@ -9,6 +9,9 @@ import CTA from './components/sections/CTA';
 import Footer from './components/sections/footer';
 import Pricing from './components/sections/pricing';
 import { useState, useEffect } from 'react';
+import FeatureMobileSection from './components/sections/feature-mobile';
+import GridBackground from './components/ui/grid-bg';
+import CookieConsent from './components/ui/cookie-consent';
 
 const App: React.FC = () => {
 	const [view, setView] = useState('home');
@@ -63,11 +66,16 @@ const App: React.FC = () => {
 			</section>
 			<section className="portal relative">
 				<DashboardSection />
-				<FeatureSection />
+				<div className="xs:block hidden">
+					<FeatureMobileSection />
+				</div>
+				<div className="block xs:hidden">
+					<FeatureSection />
+				</div>
 			</section>
 			<section className="relative overflow-clip bg-secondary">
 				<CTA />
-				<img src="assets/pattern-2.webp" alt="" className="absolute -right-40 scale-200 h-full opacity-70 top-30 overflow-visible " />
+				<img src="assets/pattern-2.webp" alt="" className="absolute -right-40 scale-200 h-full xs:hidden opacity-70 top-30 overflow-visible " />
 			</section>
 			<section className="onboarding">
 				<OnboardingSection />
@@ -78,6 +86,9 @@ const App: React.FC = () => {
 			<section>
 				<Footer />
 			</section>
+
+			{/* Cookie Consent Banner */}
+			{/* <CookieConsent /> */}
 		</>
 	);
 };

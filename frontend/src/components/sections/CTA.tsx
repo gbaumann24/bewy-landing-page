@@ -1,10 +1,10 @@
 import React from 'react';
 import { ButtonText, H2, P } from '@/lib/typography';
-
+import GridBackground from '../ui/grid-bg';
 
 const CTA: React.FC = () => {
 	return (
-		<div className="container mx-auto h-85 flex items-center justify-center gap-24 overflow-clip">
+		<div className="container mx-auto h-85 flex xs:h-fit xs:flex-col xs:py-24 items-center justify-center gap-24 overflow-clip z-20">
 			{/* Left Column - Image */}
 			<div className="flex-1">
 				<H2 className="text-white">Interesse geweckt?</H2>
@@ -14,7 +14,7 @@ const CTA: React.FC = () => {
 			</div>
 			{/* Right Column - Content */}
 			<div className="relative h-full flex-1 overflow-visible flex items-center justify-center">
-				<div className="flex w-full mt-4 rounded-xl shadow-md z-20">
+				<div className="flex w-full mt-4 rounded-xl shadow-md xs:hidden z-10">
 					<input
 						type="email"
 						placeholder="hans@beispiel.com"
@@ -24,6 +24,9 @@ const CTA: React.FC = () => {
 						<ButtonText>Warteliste beitreten</ButtonText>
 					</button>
 				</div>
+				<button className="hidden xs:flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-xl">
+					<ButtonText>Warteliste beitreten</ButtonText>
+				</button>
 			</div>
 		</div>
 	);

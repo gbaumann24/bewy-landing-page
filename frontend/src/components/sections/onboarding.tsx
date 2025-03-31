@@ -5,18 +5,18 @@ import { Handshake, MapPinHouse, Star, TrendingUp } from 'lucide-react';
 
 const OnboardingSection: React.FC = () => {
 	return (
-		<div className="container mx-auto h-lvh  flex items-center justify-center gap-12">
+		<div className="container mx-auto h-lvh xs:h-fit xs:flex-col-reverse flex py-24 items-center justify-center gap-12">
 			{/* Right Column - Image */}
-			<div className="flex-1 bg-transparent h-3/4">
-				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-4xl" />
+			<div className="flex-1 bg-transparent h-3/4  ">
+				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-4xl xs:rounded-2xl" />
 			</div>
 			{/* Left Column - Content */}
 			<div className="flex-1">
-				<H1 className="text-4xl md:text-5xl leading-14 mb-12">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
+				<H1 className=" mb-12">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
 				<Step
 					icon={<Star size={'18px'} />}
 					title="Wahl des Service-Levels"
-					description="Wählen Sie das perfekte Leistungspaket – individuell abgestimmt auf Ihre Bedürfnisse, Erwartungen und die Komplexität Ihrer Liegenschaften für optimale Ergebnisse."
+					description="Wählen Sie das perfekte Leistungspaket – individuell abgestimmt auf Ihre Bedürfnisse, Erwartungen und die Komplexität Ihrer Liegenschaften für optimale Ergebnisse. Die Pakete können untenstehend verglichen werden."
 				/>
 				<Step
 					icon={<MapPinHouse size={'18px'} />}

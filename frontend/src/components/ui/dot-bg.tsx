@@ -1,13 +1,17 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-const DotBackground: React.FC = () => {
+type dotProps = {
+	spaceing?: number;
+};
+
+const DotBackground: React.FC<dotProps> = ({ spaceing = 20 }) => {
 	return (
 		<div className="absolute inset-0 opacity-100 -z-50">
 			<div
 				className={cn(
 					'absolute inset-0',
-					'[background-size:20px_20px]',
+					`[background-size:${spaceing}px_${spaceing}px]`,
 					'[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]',
 					'dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]'
 				)}

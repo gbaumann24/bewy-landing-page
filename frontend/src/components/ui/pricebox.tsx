@@ -31,10 +31,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
 	buttonText,
 	versammlung,
 	onButtonClick,
-	containerClassName = 'flex flex-col items-center justify-center border rounded-xl p-8 w-1/3',
+	containerClassName,
 }) => {
 	return (
-		<div className={cn(containerClassName, 'flex flex-col items-center justify-center border rounded-xl p-8 w-1/3')}>
+		<div className={cn(containerClassName, 'flex flex-col items-center justify-center border rounded-xl p-8 w-1/3 xs:w-full')}>
 			<div className="w-full h-full">
 				<H4 className="text-secondary">{title}</H4>
 				<P className="text-muted-foreground text-sm">{description}</P>

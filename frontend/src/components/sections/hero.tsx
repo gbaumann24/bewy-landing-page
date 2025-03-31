@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
 	return (
-		<div className="relative container mx-auto overflow-clip h-lvh xs:min-h-fit flex xs:flex-col items-center justify-center gap-12 ">
+		<div className="relative container mx-auto overflow-clip h-lvh xs:min-h-fit flex xs:flex-col items-center justify-center gap-12">
 			{/* Grid Background */}
 			<GridBackground />
 
@@ -92,7 +92,7 @@ const HeroSection: React.FC = () => {
 					/>
 				</div>
 			</div>
-			<div className="items-center justify-center relative z-10 pb-12 flex-1 h-full w-full hidden xs:flex">
+			<div className="items-center justify-center relative z-10 pb-12 pt-12 flex-1 h-full w-full hidden xs:flex">
 				{/* Base image */}
 				<div className='relative w-full flex items-center justify-center'>
 					<img src="/assets/hero-0.webp" alt="Hero Image" className=" h-full  object-cover w-9/10 rounded-2xl" />

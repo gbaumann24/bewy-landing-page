@@ -143,12 +143,12 @@ const FeatureSection: React.FC = () => {
 	return (
 		<div ref={sectionRef} className="container mx-auto h-lvh flex xs:flex-col items-center justify-center gap-24 xs:mt-30">
 			{/* Left Column - Content */}
-			<div className="flex flex-col flex-1 h-full justify-center">
-				<div className="items-center mb-6 flex flex-row h-fit w-fit rounded-xl  bg-accent p-1 gap-1">
+			<div className="flex flex-col flex-1 h-full w-full justify-center">
+				<div className="items-center mb-6 flex flex-row h-13  w-fit rounded-xl  bg-accent p-1 gap-1">
 					<button
 						className={`${
 							type === 'Miet' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 py-3 rounded-lg flex flex-row gap-2 items-center cursor-pointer`}
+						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
 						<Building2 size={'18px'} /> <ButtonText>Mieteigentum</ButtonText>
@@ -157,7 +157,7 @@ const FeatureSection: React.FC = () => {
 					<button
 						className={`${
 							type === 'Stwe' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 py-3 rounded-lg flex flex-row gap-2 items-center cursor-pointer`}
+						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Stwe')}
 					>
 						<KeyRound size={'18px'} />
@@ -176,7 +176,7 @@ const FeatureSection: React.FC = () => {
 			</div>
 
 			{/* Right Column - Image */}
-			<div className="relative flex-1 h-full overflow-hidden flex items-center justify-center">
+			<div className="xs:hidden relative flex-1 h-full overflow-hidden flex items-center justify-center">
 				<DotBackground />
 				<AnimatePresence mode="wait">
 					<motion.img

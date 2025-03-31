@@ -1,7 +1,11 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-const GridBackground: React.FC = () => {
+type GridProps = {
+	bgColor?: string;
+};
+
+const GridBackground: React.FC<GridProps> = ({bgColor = 'white'}) => {
 	return (
 		<div className="absolute inset-0 opacity-40">
 			<div
@@ -12,7 +16,7 @@ const GridBackground: React.FC = () => {
 					'dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]'
 				)}
 			/>
-			<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+			<div className={`pointer-events-none absolute inset-0 flex items-center justify-center bg-${bgColor} [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black`}></div>
 		</div>
 	);
 };

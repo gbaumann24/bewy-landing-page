@@ -3,9 +3,9 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
 	return (
-		<footer className="container mx-auto flex items-center justify-center bg-white rounded-lg shadow-sm  m-4">
+		<footer className="container mx-auto flex items-center justify-center bg-white rounded-lg shadow-sm m-4">
 			<div className="w-full p-8 bg-neutral-700 rounded-lg">
-				<div className="sm:flex sm:items-center sm:justify-between">
+				<div className="flex flex-row items-end justify-between">
 					<a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
 						<img src="/assets/logo-invert.webp" className="h-18" alt="Your Logo" />
 					</a>

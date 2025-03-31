@@ -7,17 +7,17 @@ import { Building2, KeyRound } from 'lucide-react';
 const Pricing: React.FC = () => {
 	const [type, setType] = React.useState('Miet');
 	return (
-		<div className="container mx-auto flex flex-col items-center justify-center gap-12 py-18 pb-34">
-			<div className="flex flex-col items-center justify-center w-3/5 gap-4 mb-4">
-				<H1>Unsere Serivcepakete</H1>
+		<div className="container mx-auto flex flex-col items-center justify-center gap-12 xs:gap-0 py-18 pb-34">
+			<div className="flex flex-col items-center justify-center w-3/5 xs:w-full gap-4 mb-4">
+				<H1 className='xs:text-center'>Unsere Serivcepakete</H1>
 				<P className="text-muted-foreground text-center">
 					Ob effiziente Basisverwaltung oder umfassender Rundum-Sorglos-Service – unsere Pakete sind massgeschneidert, um Ihre Immobilien optimal zu betreuen.
 				</P>
-				<div className="items-center mb-6 flex flex-row h-fit w-fit rounded-xl  bg-accent p-1 gap-1">
+				<div className="items-center mb-6 flex flex-row h-13  w-fit rounded-xl  bg-accent p-1 gap-1">
 					<button
 						className={`${
 							type === 'Miet' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 py-3 rounded-lg flex flex-row gap-2 items-center cursor-pointer`}
+						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
 						<Building2 size={'18px'} /> <ButtonText>Mieteigentum</ButtonText>
@@ -26,7 +26,7 @@ const Pricing: React.FC = () => {
 					<button
 						className={`${
 							type === 'Stwe' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 py-3 rounded-lg flex flex-row gap-2 items-center cursor-pointer`}
+						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Stwe')}
 					>
 						<KeyRound size={'18px'} />
@@ -36,7 +36,7 @@ const Pricing: React.FC = () => {
 			</div>
 
 			{type === 'Miet' && (
-				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 w-full">
+				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 xs:gap-6 w-full">
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
 						title="Kompakt"
@@ -52,7 +52,7 @@ const Pricing: React.FC = () => {
 					/>
 					{/* Paket 2: Komfort-Plan */}
 					<PricingCard
-						containerClassName="shadow-xl scale-104 border-secondary/30 bg-secondary/10"
+						containerClassName="shadow-xl scale-104 xs:scale-100 xs:shadow-none border-secondary/30 bg-secondary/10"
 						title="Komfort"
 						description="Erweiterte Betreuung mit vollem Portalzugang und flexibler Mietermix-Optimierung."
 						price="CHF 80"
@@ -80,7 +80,7 @@ const Pricing: React.FC = () => {
 				</div>
 			)}
 			{type === 'Stwe' && (
-				<div className="flex flex-row items-start justify-center gap-12 w-full">
+				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 xs:gap-6  w-full ">
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
 						title="Kompakt"
