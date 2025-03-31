@@ -1,6 +1,5 @@
 import { H1, P } from '@/lib/typography';
 import { motion } from 'framer-motion';
-import { div } from 'framer-motion/client';
 import React from 'react';
 
 const DashboardSection: React.FC = () => {

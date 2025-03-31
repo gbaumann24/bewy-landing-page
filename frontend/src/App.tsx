@@ -10,8 +10,7 @@ import Footer from './components/sections/footer';
 import Pricing from './components/sections/pricing';
 import { useState, useEffect } from 'react';
 import FeatureMobileSection from './components/sections/feature-mobile';
-import GridBackground from './components/ui/grid-bg';
-import CookieConsent from './components/ui/cookie-consent';
+
 
 const App: React.FC = () => {
 	const [view, setView] = useState('home');

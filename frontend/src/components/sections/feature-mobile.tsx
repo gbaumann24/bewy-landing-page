@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { Building2, ChevronDownIcon, ChevronUpIcon, KeyRound } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import DotBackground from '../ui/dot-bg';
-import GridBackground from '../ui/grid-bg';
 
 const FeatureMobileSection: React.FC = () => {
 	const [accordionItem, setAccordionItem] = useState('item-1');
@@ -82,7 +81,9 @@ const FeatureMobileSection: React.FC = () => {
 						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-2" title="Mieterkommunikation">
-						<P className="text-muted-foreground text-sm">Kommunikation via WhatsApp oder Mieterportal. Reparaturen, Anfragen und Dokumente zentral verfügbar – ohne Papierkram.</P>
+						<P className="text-muted-foreground text-sm">
+							Kommunikation via WhatsApp oder Mieterportal. Reparaturen, Anfragen und Dokumente zentral verfügbar – ohne Papierkram.
+						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-3" title="Zustand, Wartung und Werterhalt">
 						<P className="text-muted-foreground text-sm">
@@ -96,7 +97,9 @@ const FeatureMobileSection: React.FC = () => {
 						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-5" title="Bewy AI">
-						<P className="text-muted-foreground text-sm">KI-basierter Chatbot beantwortet Fragen rund um die Uhr. Sofortiger Zugriff auf relevante Informationen ohne Wartezeit.</P>
+						<P className="text-muted-foreground text-sm">
+							KI-basierter Chatbot beantwortet Fragen rund um die Uhr. Sofortiger Zugriff auf relevante Informationen ohne Wartezeit.
+						</P>
 					</MobileAccordionItem>
 				</div>
 			);
@@ -109,13 +112,17 @@ const FeatureMobileSection: React.FC = () => {
 						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-2" title="Versammlungen transparent dokumentiert">
-						<P className="text-muted-foreground text-sm">Steuern Sie Versammlungen digital und transparent. Alle Unterlagen und Beschlüsse sind zentral und jederzeit einsehbar.</P>
+						<P className="text-muted-foreground text-sm">
+							Steuern Sie Versammlungen digital und transparent. Alle Unterlagen und Beschlüsse sind zentral und jederzeit einsehbar.
+						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-3" title="Finanzen jederzeit im Griff">
 						<P className="text-muted-foreground text-sm">Überblick über Budget, Rücklagen und Kosten stets verfügbar. Finanzdaten sind klar dokumentiert und abrufbar.</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-4" title="Bewy AI">
-						<P className="text-muted-foreground text-sm">KI-basierter Chatbot beantwortet Fragen jederzeit zuverlässig. Direkter Zugang zu wichtigen Informationen ohne Verzögerung.</P>
+						<P className="text-muted-foreground text-sm">
+							KI-basierter Chatbot beantwortet Fragen jederzeit zuverlässig. Direkter Zugang zu wichtigen Informationen ohne Verzögerung.
+						</P>
 					</MobileAccordionItem>
 				</div>
 			);

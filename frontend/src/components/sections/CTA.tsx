@@ -1,6 +1,5 @@
 import React from 'react';
 import { ButtonText, H2, P } from '@/lib/typography';
-import GridBackground from '../ui/grid-bg';
 
 const CTA: React.FC = () => {
 	return (
