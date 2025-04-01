@@ -1,5 +1,6 @@
 import { Linkedin } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
 	return (
@@ -11,19 +12,19 @@ export const Footer: React.FC = () => {
 					</a>
 					<ul className="flex flex-wrap items-center mb-6 text-sm text-white sm:mb-0 ">
 						<li>
-							<a href="#" className="hover:underline me-4 md:me-6">
+							<Link to="/datenschutz" className="hover:text-secondary me-4 md:me-6">
 								Datenschutzbestimmung
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="#" className="hover:underline me-4 md:me-6">
+							<Link to="/impressum" className="hover:text-secondary me-4 md:me-6">
 								Impressum
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="#" className="hover:underline">
+							<Link to="/kontakt" className="hover:text-secondary ">
 								Kontakt
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>

@@ -1,4 +1,4 @@
-import { ButtonText, H1 } from '@/lib/typography';
+import { ButtonText, H1, H2 } from '@/lib/typography';
 import React, { useEffect, useState, useRef } from 'react';
 import DotBackground from '../ui/dot-bg';
 import { Building2, KeyRound } from 'lucide-react';
@@ -141,7 +141,7 @@ const FeatureSection: React.FC = () => {
 	};
 
 	return (
-		<div ref={sectionRef} className="container mx-auto h-lvh flex xs:flex-col items-center justify-center gap-24 xs:mt-30">
+		<div ref={sectionRef} className="container mx-auto h-lvh max-h-[1100px] flex xs:flex-col items-center justify-center gap-24 xs:mt-30">
 			{/* Left Column - Content */}
 			<div className="flex flex-col flex-1 h-full w-full justify-center">
 				<div className="items-center mb-6 flex flex-row h-13  w-fit rounded-xl  bg-accent p-1 gap-1">
@@ -164,7 +164,7 @@ const FeatureSection: React.FC = () => {
 						<ButtonText>Stockwerkeigentum</ButtonText>
 					</button>
 				</div>
-				<H1 className="mb-6">{type === 'Miet' ? 'Kontrolle über Ihr Mieteigentum' : 'Kontrolle über Ihr Stockwerkeigentum'}</H1>
+				<H2 className="mb-6">{type === 'Miet' ? 'Kontrolle über Ihr Mieteigentum' : 'Kontrolle über Ihr STWE'}</H2>
 
 				<div onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)} className="h-[500px]">
 					{type === 'Miet' ? (

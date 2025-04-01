@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
 
 			{/* Right Column - Image */}
 			<div className="flex items-center justify-center z-10 flex-1 h-full sm:hidden">
-				<div className="relative h-2/3 w-full flex items-center justify-center xl:scale-90">
+				<div className="relative h-2/3 max-h-[700px]  w-full flex items-center justify-center xl:scale-90">
 					{/* Base image */}
 					<img src="/assets/hero-0.webp" alt="Hero Image" className="h-full object-cover w-9/10 xl:w-full rounded-2xl" />
 
@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
 							alt="Overlay 1"
 							className="w-60 shadow-md rounded-2xl"
 							initial={{ y: 50, opacity: 0 }}
-							animate={{ y: [-8, 8, -8], opacity: 1 }}
+							animate={{ y: [-2, 2, -2], opacity: 1 }}
 							transition={{
 								opacity: { duration: 0.5, delay: 0.3 },
 								y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 },
@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
 							alt="Overlay 2"
 							className="w-60 shadow-md rounded-2xl"
 							initial={{ y: 50, opacity: 0 }}
-							animate={{ y: [-10, 6, -10], opacity: 1 }}
+							animate={{ y: [-2, 2, -2], opacity: 1 }}
 							transition={{
 								opacity: { duration: 0.5, delay: 0.6 },
 								y: { repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 0.6 },
@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
 						alt="Overlay 3"
 						className="absolute w-110 bottom-[6%] right-[0%] "
 						initial={{ y: 50, opacity: 0 }}
-						animate={{ y: [5, -8, 5], opacity: 1 }}
+						animate={{ y: [-2, 2, -2], opacity: 1 }}
 						transition={{
 							opacity: { duration: 0.5, delay: 0.9 },
 							y: { repeat: Infinity, duration: 4.5, ease: 'easeInOut', delay: 0.9 },
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
 						alt="Overlay 4"
 						className="absolute bottom-[45%] left-[0%] w-130"
 						initial={{ y: 50, opacity: 0 }}
-						animate={{ y: [-7, 7, -7], opacity: 1 }}
+						animate={{ y: [-2, 2, -2], opacity: 1 }}
 						transition={{
 							opacity: { duration: 0.5, delay: 1.2 },
 							y: { repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 1.2 },
@@ -94,7 +94,7 @@ const HeroSection: React.FC = () => {
 			</div>
 			<div className="items-center justify-center relative z-10 pb-12 pt-12 flex-1 h-full w-full hidden xs:flex">
 				{/* Base image */}
-				<div className='relative w-full flex items-center justify-center'>
+				<div className="relative w-full flex items-center justify-center">
 					<img src="/assets/hero-0.webp" alt="Hero Image" className=" h-full  object-cover w-9/10 rounded-2xl" />
 
 					<motion.img

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { ButtonText } from '@/lib/typography';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavItem {
 	label: string;
@@ -116,13 +117,15 @@ const Navbar: React.FC<NavbarProps> = ({
 									{item.label}
 								</div>
 							))}
-							<button
-								className={`text-[15px] px-10 h-11 cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors ${
-									scrolled ? 'rounded-full' : 'rounded-xl'
-								}`}
-							>
-								<ButtonText>Kontakt</ButtonText>
-							</button>
+							<Link to="/kontakt">
+								<button
+									className={`text-[15px] px-10 h-11 cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors ${
+										scrolled ? 'rounded-full' : 'rounded-xl'
+									}`}
+								>
+									<ButtonText>Kontakt</ButtonText>
+								</button>
+							</Link>
 						</div>
 					</div>
 				</motion.div>

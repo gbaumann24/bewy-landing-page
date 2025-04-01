@@ -4,7 +4,7 @@ import React from 'react';
 const words = 'Bewy verbindet bewährte Verwaltungsstandards mit zeitgemässer digitaler Umsetzung.';
 const MessageSection: React.FC = () => {
 	return (
-		<div className="container mx-auto h-lvh flex items-center justify-center gap-12 py-18">
+		<div className="container mx-auto h-lvh max-h-[1000px] flex items-center justify-center gap-12 py-18">
 			<div className="relative w-full h-full rounded-xl overflow-clip">
 				<img src="/assets/sofa.webp" className="absolute inset-0 h-full w-full object-cover" />
 				<div className="absolute inset-0 opacity-50 bg-black " />

@@ -5,13 +5,13 @@ import { Handshake, MapPinHouse, Star, TrendingUp } from 'lucide-react';
 
 const OnboardingSection: React.FC = () => {
 	return (
-		<div className="container mx-auto h-lvh xs:h-fit xs:flex-col-reverse flex py-24 items-center justify-center gap-12">
+		<div className="container mx-auto h-lvh xs:h-fit max-h-[900px] xs:flex-col-reverse flex py-24 items-center justify-center gap-12">
 			{/* Right Column - Image */}
-			<div className="flex-1 bg-transparent h-3/4 xs:h-full xs:w-full">
-				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className=" object-cover object-center rounded-4xl xs:rounded-2xl" />
+			<div className="flex-1 bg-transparent h-full max-h-[600px] xs:h-full xs:w-full">
+				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-4xl xs:rounded-2xl" />
 			</div>
 			{/* Left Column - Content */}
-			<div className="flex-1">
+			<div className="flex-1 flex flex-col h-full w-full justify-center">
 				<H1 className=" mb-12">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
 				<Step
 					icon={<Star size={'18px'} />}

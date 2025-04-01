@@ -3,7 +3,9 @@ import { ButtonText, H2, P } from '@/lib/typography';
 
 const CTA: React.FC = () => {
 	return (
-		<div className="container mx-auto h-85 flex xs:h-fit xs:flex-col xs:py-24 items-center justify-center gap-24 overflow-clip z-20">
+		<div className="relative container px-12 bg-secondary rounded-xl mx-auto h-85 flex xs:h-fit xs:flex-col xs:py-24 items-center justify-center gap-24 overflow-clip z-20">
+			<img src="assets/pattern-2.webp" alt="" className="absolute -right-40  h-full object-cover xs:hidden opacity-70  overflow-visible " />
+
 			{/* Left Column - Image */}
 			<div className="flex-1">
 				<H2 className="text-white">Interesse geweckt?</H2>
