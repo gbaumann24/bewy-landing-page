@@ -1,6 +1,6 @@
-import React, { useState, FormEvent } from 'react';
+import React from 'react';
 import { HandHeart } from 'lucide-react';
-import { H1, P, ButtonText } from '@/lib/typography';
+import { H1, P } from '@/lib/typography';
 import GridBackground from '../ui/grid-bg';
 import { motion } from 'framer-motion';
 import { FlipWords } from '../ui/flip-words';

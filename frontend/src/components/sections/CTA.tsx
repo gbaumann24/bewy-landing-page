@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonText, H1, H4, P } from '@/lib/typography';
+import { ButtonText, H1, P } from '@/lib/typography';
 
 const CTA: React.FC = () => {
 	return (
