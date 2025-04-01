@@ -61,7 +61,7 @@ export default function Kontakt() {
 									</div>
 									<div className="space-y-2">
 										<Label htmlFor="phone">Telefon (optional)</Label>
-										<Input id="phone" type="tel" placeholder="+41 12 345 67 89" />
+										<Input id="phone" type="tel" placeholder="xxx xxx xx xx" />
 									</div>
 									<div className="space-y-2">
 										<Label htmlFor="message">Nachricht</Label>
@@ -93,8 +93,8 @@ export default function Kontakt() {
 					</div>
 				</div>
 			</div>
-			<div className="relative h-full w-1/2">
-				<img src="/assets/kontakt-1.webp" alt="" className="object-cover h-full w-full" />
+			<div className="relative h-full w-1/2 p-8 ">
+				<img src="/assets/kontakt-1.webp" alt="" className="rounded-2xl object-cover h-full w-full" />
 				{/* <div className="absolute bottom-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 p-6 backdrop-blur-xs border bg-white/60 rounded-lg shadow-lg">
 					<div className="space-y-3">
 						<div className="flex items-center">
