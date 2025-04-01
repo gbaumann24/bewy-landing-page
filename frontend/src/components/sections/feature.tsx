@@ -151,7 +151,7 @@ const FeatureSection: React.FC = () => {
 						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
-						<Building2 size={'18px'} /> <ButtonText>Mieteigentum</ButtonText>
+						<Building2 size={'18px'} /> <ButtonText>Mietliegenschaft</ButtonText>
 					</button>
 
 					<button
@@ -164,7 +164,7 @@ const FeatureSection: React.FC = () => {
 						<ButtonText>Stockwerkeigentum</ButtonText>
 					</button>
 				</div>
-				<H2 className="mb-6">{type === 'Miet' ? 'Kontrolle über Ihr Mieteigentum' : 'Kontrolle über Ihr STWE'}</H2>
+				<H2 className="mb-6">{type === 'Miet' ? 'Kontrolle über Ihre Mietliegenschaft' : 'Kontrolle über Ihr Stockwerkeigentum'}</H2>
 
 				<div onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)} className="h-[500px]">
 					{type === 'Miet' ? (

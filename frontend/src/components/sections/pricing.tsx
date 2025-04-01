@@ -9,7 +9,7 @@ const Pricing: React.FC = () => {
 	return (
 		<div className="container mx-auto flex flex-col items-center justify-center gap-12 xs:gap-0 py-18 pb-34">
 			<div className="flex flex-col items-center justify-center w-3/5 xs:w-full gap-4 mb-4">
-				<H1 className='xs:text-center'>Unsere Serivcepakete</H1>
+				<H1 className="xs:text-center">Unsere Serivcepakete</H1>
 				<P className="text-muted-foreground text-center">
 					Ob effiziente Basisverwaltung oder umfassender Rundum-Sorglos-Service – unsere Pakete sind massgeschneidert, um Ihre Immobilien optimal zu betreuen.
 				</P>
@@ -20,7 +20,7 @@ const Pricing: React.FC = () => {
 						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
-						<Building2 size={'18px'} /> <ButtonText>Mieteigentum</ButtonText>
+						<Building2 size={'18px'} /> <ButtonText>Mietliegenschaft</ButtonText>
 					</button>
 
 					<button
@@ -40,7 +40,7 @@ const Pricing: React.FC = () => {
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
 						title="Kompakt"
-						description="Effiziente Basisverwaltung für unkomplizierte Immobilien."
+						description="Effiziente Basisverwaltung für unkomplizierte Eigentümer."
 						price="CHF 60"
 						vorOrt={['1x Begehung pro Objekt']}
 						eigentuemerkommunikation={['E-Mail', 'Notfall-Hotline']}

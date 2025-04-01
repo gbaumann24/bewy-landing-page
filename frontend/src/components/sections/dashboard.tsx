@@ -12,9 +12,9 @@ const DashboardSection: React.FC = () => {
 						Ihr persönliches <br /> Immobilien-Cockpit
 					</H1>
 					<P className="text-neutral-500 mb-8 w-6/7 xs:w-full">
-						Unser Eigentümerportal ermöglicht Ihnen jederzeit und von überall den Zugang zu allen relevanten Informationen rund um Ihre Liegenschaft – von Abrechnungen,
-						Zustandsanalysen und STWE-Protokollen bis hin zu laufenden Vorgängen wie Mieterwechsel und Sanierungen. So behalten Sie stets die Übersicht und können bei Bedarf
-						fundierte Entscheidungen treffen, ohne sich um die Details kümmern zu müssen.
+						Unser Eigentümerportal ermöglicht Ihnen jederzeit und von überall den Zugang zu allen relevanten Informationen rund um Ihre Liegenschaft – von Mietzinseinnahmen und
+						Leerbestände bis hin zu Mieterwechseln oder Handwerkerofferten. So behalten Sie stets die Übersicht und können bei Bedarf fundierte Entscheidungen treffen, ohne auf
+						Ihren Bewirtschafter angewiesen zu sein.
 					</P>
 					{/* <button className="flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-lg">
 					<ButtonText>Mehr Erfahren</ButtonText>

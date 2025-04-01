@@ -7,8 +7,8 @@ const OnboardingSection: React.FC = () => {
 	return (
 		<div className="container mx-auto h-lvh xs:h-fit max-h-[900px] xs:max-h-none xs:flex-col-reverse flex py-24 items-center justify-center gap-12">
 			{/* Right Column - Image */}
-			<div className="flex-1 bg-transparent h-full max-h-[600px] xs:h-full xs:w-full">
-				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-4xl xs:rounded-2xl" />
+			<div className="flex-1 bg-transparent h-full max-h-[600px] xs:h-80 xs:w-full">
+				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-2xl" />
 			</div>
 			{/* Left Column - Content */}
 			<div className="flex-1 flex flex-col h-full w-full justify-center">
@@ -16,22 +16,22 @@ const OnboardingSection: React.FC = () => {
 				<Step
 					icon={<Star size={'18px'} />}
 					title="Wahl des Service-Levels"
-					description="Wählen Sie das perfekte Leistungspaket – individuell abgestimmt auf Ihre Bedürfnisse, Erwartungen und die Komplexität Ihrer Liegenschaften für optimale Ergebnisse. Die Pakete können untenstehend verglichen werden."
+					description="Wählen Sie das für Sie perfekte Servicelevel – individuell abgestimmt auf Ihre Bedürfnisse, Erwartungen und die Komplexität Ihrer Liegenschaft. Die Servicelevel können untenstehend verglichen werden."
 				/>
 				<Step
 					icon={<MapPinHouse size={'18px'} />}
-					title="Initiale Begehung & Zustandsanalyse"
-					description="Gemeinsam mit Bewy und dem erfahrenen Bauleiter erfolgt eine detaillierte Bestandesaufnahme: Gebäudehülle, Zustand, Wartungsbedarf und technische Infrastruktur werden systematisch erfasst."
+					title="Begehung & Zustandsanalyse Ihrer Immobilie"
+					description="Gemeinsam mit Bewy und einem erfahrenen Bauleiter erfolgt eine detaillierte Bestandesaufnahme: Die gesamte Infrastruktur mit allen Bauteilen wird systematisch geprüft und erfasst."
 				/>
 				<Step
 					icon={<TrendingUp size={'18px'} />}
-					title="Entwicklung der Gebäudestrategie"
+					title="Entwicklung der Immobilienstrategie"
 					description="Basierend auf den erhobenen Daten erstellen wir einen Investitions- und Sanierungsplan. Gleichzeitig werden alle relevanten Informationen strukturiert und digital aufbereitet."
 				/>
 				<Step
 					icon={<Handshake size={'18px'} />}
 					title="Übergabe & Steuerung im Eigentümerportal"
-					description="Alle Daten fliessen ins Bewy-Portal. Dort steuern und überwachen Sie Ihre Liegenschaft digital – mit voller Transparenz und jederzeitem Zugriff."
+					description="Alle Daten fliessen ins Eigentümerportal. Dort steuern und überwachen Sie Ihre Liegenschaft digital – mit voller Transparenz und jederzeitigem Zugriff."
 				/>
 			</div>
 		</div>

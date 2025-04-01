@@ -42,7 +42,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 					<P className=" tracking-tight text-5xl font-bold">{price}</P>
 					<div className="ml-1 mb-1">
 						<P className="text-xs text-muted-foreground">pro Objekt</P>
-						<P className="text-xs text-muted-foreground">pro Jahr</P>
+						<P className="text-xs text-muted-foreground">pro Monat</P>
 					</div>
 				</div>
 				<hr className="my-4 border-t border-gray-300" />

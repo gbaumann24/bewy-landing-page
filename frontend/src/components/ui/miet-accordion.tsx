@@ -21,38 +21,37 @@ export const MietAccordion: React.FC<MietAccordionProps> = ({ accordionItem, set
 			<AccordionItem value="item-1" className={cn('w-full', accordionItem === 'item-1' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Schnelle und reibungslose Vermietung</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Automatisierte Bonitätsprüfungen, Mieter-Objekt Fit und digitale Referenz-Checks ermöglichen fundierte Entscheidungen in Rekordzeit. Sie bestimmen selbst, wie stark Sie
-					in den Prozess eingebunden sein möchten, behalten aber jederzeit die volle Kontrolle.
+					Automatisierte Bonitätsprüfungen, Kontrolle eines passenden Mieter-Mix und digitale Referenz-Checks ermöglichen fundierte Entscheidungen in Rekordzeit. Sie bestimmen
+					selbst, wie stark Sie in den Prozess eingebunden sein möchten, behalten aber jederzeit den Überblick.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-2" className={cn('w-full', accordionItem === 'item-2' && progress < 100 && 'pointer-events-none')}>
-				<AccordionTrigger>Mieterkommunikation</AccordionTrigger>
+				<AccordionTrigger>Effektive Mieterkommunikation</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Ihre Mieter kommunizieren bequem über WhatsApp oder das Mieterportal. Reparaturmeldungen, Anfragen und Dokumentenzugriff – alles zentral, nachvollziehbar und ohne
-					Papierkram. So läuft die Kommunikation effizient, modern und ganz ohne Umwege – für mehr Zufriedenheit Ihrer Kunden.
+					Papierkram. So läuft die Kommunikation effizient, modern und ganz ohne Umwege – für mehr Zufriedenheit Ihrer Mietenden.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-3" className={cn('w-full', accordionItem === 'item-3' && progress < 100 && 'pointer-events-none')}>
-				<AccordionTrigger>Zustand, Wartung und Werterhalt</AccordionTrigger>
+				<AccordionTrigger>Kontinuierlicher Werterhalt</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Bewy überwacht den baulichen Zustand Ihrer Liegenschaften kontinuierlich und erkennt notwendige Massnahmen frühzeitig. Fälligkeiten, Wartungen und notwendige
-					Instandhaltungsmassnahmen werden automatisch erkannt, gemeldet und effizient in die Wege geleitet. So sichern Sie den Werterhalt langfristig – ohne Mehraufwand. Sie
-					lehnen sich zurück, Bewy übernimmt den Rest.
+					Instandhaltungsmassnahmen werden erkannt, gemeldet und effizient in die Wege geleitet. So sichern Sie den Werterhalt langfristig. Sie lehnen sich zurück, Bewy übernimmt
+					den Rest.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-4" className={cn('w-full', accordionItem === 'item-4' && progress < 100 && 'pointer-events-none')}>
-				<AccordionTrigger>Finanzen im Griff</AccordionTrigger>
+				<AccordionTrigger>Übersichtliche Finanzen</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Behalten Sie jederzeit den Überblick über Mietzinsen, Nebenkosten und Renditen – bequem und ohne Aufwand. Alle Finanzkennzahlen Ihrer Liegenschaften sind in Echtzeit
-					verfügbar, grafisch aufbereitet und bereit zum Export. Bilanz, Erfolgsrechnung, Saldolisten und Mieterspiegel stehen auf Knopfdruck bereit – zentral gesteuert im
-					übersichtlichen Cockpit.
+					Behalten Sie jederzeit den Überblick über Mietzinseinanhmen, Investitionen und Renditen – bequem und ohne Aufwand. Alle Finanzkennzahlen Ihrer Liegenschaften sind in
+					Echtzeit verfügbar, grafisch aufbereitet und bereit zum Export. Bilanz, Erfolgsrechnung, Saldolisten und Mieterspiegel stehen auf Knopfdruck bereit.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-5" className={cn('w-full', accordionItem === 'item-5' && progress < 100 && 'pointer-events-none')}>
-				<AccordionTrigger>Bewy AI</AccordionTrigger>
+				<AccordionTrigger>Bewy AI – Ihre digitale Assistenz</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Bewy AI ist ein zentraler, KI-basierter Chatbot. Er beantwortet Fragen zu Objekten, Finanzen, Versammlungen oder Dokumenten – sofort, zuverlässig und rund um die Uhr. So
-					haben Sie jederzeit schnellen Zugriff auf relevante Informationen, ohne auf Rückmeldungen warten zu müssen.
+					Bewy AI ergänzt die klassische Bewirtschaftung durch Ihre persönliche, KI-gestützte Assistenz. Stellen Sie rund um die Uhr Ihre Fragen zu Objekten, Finanzen oder
+					Dokumenten und erhalten Sie sofort zuverlässige Antworten. Bewy AI verschafft Ihnen schnellen, einfachen Zugang zu wichtigen Informationen ohne Wartezeiten.
 				</AccordionContent>
 			</AccordionItem>
 		</Accordion>

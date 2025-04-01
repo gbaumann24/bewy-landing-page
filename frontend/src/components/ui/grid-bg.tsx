@@ -7,7 +7,7 @@ type GridProps = {
 
 const GridBackground: React.FC<GridProps> = ({bgColor = 'white'}) => {
 	return (
-		<div className="absolute inset-0 opacity-40">
+		<div className="absolute inset-0 opacity-50">
 			<div
 				className={cn(
 					'absolute inset-0',

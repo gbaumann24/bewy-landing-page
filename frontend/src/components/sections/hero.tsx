@@ -1,38 +1,31 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 import { HandHeart } from 'lucide-react';
 import { H1, P, ButtonText } from '@/lib/typography';
 import GridBackground from '../ui/grid-bg';
 import { motion } from 'framer-motion';
+import { FlipWords } from '../ui/flip-words';
+import { BroschureApply } from '../ui/borschure-apply';
 
 const HeroSection: React.FC = () => {
 	return (
-		<div className="relative container mx-auto overflow-clip h-lvh xs:min-h-fit flex xs:flex-col items-center justify-center gap-12">
+		<div className="relative container mx-auto h-lvh xs:min-h-fit flex xs:flex-col items-center justify-center gap-6">
 			{/* Grid Background */}
 			<GridBackground />
 
 			{/* Left Column - Content */}
 			<div className="relative z-10 flex-1 w-full xs:pt-34">
-				<div className="flex gap-2 px-4 py-1 items-center bg-neutral-100 border border-neutral-300 w-fit rounded-full text-sm mb-4 ">
-					<HandHeart size={18} />
-					<span>Privates Miet- & Stockwerkeigentum</span>
+				<div className="flex gap-2 px-4 xs:px-3 py-1 items-center bg-accent border border-neutral-300 w-fit rounded-full text-sm xs:text-xs mb-4 ">
+					<HandHeart className=" w-4 h-4" />
+					<span>Mietliegenschaften & Stockwerkeigentum</span>
 				</div>
-				<H1 className="mb-4">Immobilien Verwaltung mit Weitblick für nachhaltigen Werte</H1>
-				<P className="text-muted-foreground mb-8">
-					Mit Bewy haben Sie Ihre Liegenschaft jederzeit im Blick - fachlich fundierte Begleitung, digitale Transparenz und ein Service, der sich nach Ihren Bedürfnissen richtet.
+				<H1 className="mb-4">
+					Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} />
+				</H1>
+				<P className="text-muted-foreground mb-8 ">
+					Mit Bewy als Ihre Immobilienverwaltung haben Sie Ihre Liegenschaften jederzeit im Blick – fachlich fundierte Begleitung, digitale Transparenz und ein Service, der sich
+					nach Ihren Bedürfnissen richtet.
 				</P>
-				<div className="flex w-full mt-4 rounded-xl shadow-md xs:hidden">
-					<input
-						type="email"
-						placeholder="hans@beispiel.com"
-						className="flex-grow px-6 py-3 text-muted-foreground bg-white placeholder-gray-300 border rounded-l-xl focus:outline-none focus:rounded-r-none focus:border-secondary"
-					/>
-					<button className="flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-r-xl">
-						<ButtonText>Warteliste beitreten</ButtonText>
-					</button>
-				</div>
-				<button className="hidden xs:flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-xl">
-					<ButtonText>Warteliste beitreten</ButtonText>
-				</button>
+				<BroschureApply />
 			</div>
 
 			{/* Right Column - Image */}
