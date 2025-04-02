@@ -50,7 +50,7 @@ return(
 							setEmail(e.target.value);
 							if (error) setError('');
 						}}
-						placeholder="hans@beispiel.com"
+						placeholder="max@muster.ch"
 						className={`flex-grow px-6 py-3 text-muted-foreground bg-white placeholder-gray-300 border rounded-l-xl focus:outline-none ${
 							error ? 'border-red-500' : 'border-secondary/40 focus-visible:border-secondary'
 						}`}

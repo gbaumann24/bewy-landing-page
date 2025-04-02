@@ -18,12 +18,12 @@ const HeroSection: React.FC = () => {
 					<HandHeart className=" w-4 h-4" />
 					<span>Mietliegenschaften & Stockwerkeigentum</span>
 				</div>
-				<H1 className="mb-4">
-					Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} />
+				<H1 className="mb-4 leading-14">
+					Zeitgerechte Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} />
 				</H1>
 				<P className="text-muted-foreground mb-8 ">
-					Mit Bewy als Ihre Immobilienverwaltung haben Sie Ihre Liegenschaften jederzeit im Blick – fachlich fundierte Begleitung, digitale Transparenz und ein Service, der sich
-					nach Ihren Bedürfnissen richtet.
+					Mit Bewy als Ihre Immobilien Bewirtschaftung haben Sie Ihre Liegenschaft jederzeit im Blick – fachlich fundierte Begleitung, digitale Transparenz und ein Service, der
+					sich nach Ihren Bedürfnissen richtet.
 				</P>
 				<BroschureApply />
 			</div>
@@ -35,13 +35,13 @@ const HeroSection: React.FC = () => {
 					<img src="/assets/hero-0.webp" alt="Hero Image" className="h-full object-cover w-9/10 xl:w-full rounded-2xl" />
 
 					{/* Overlay images with sequential entrance */}
-					<div className="absolute -top-[3%] right-[0%] flex items-center justify-end gap-4 w-full h-fit">
+					<div className="absolute -top-[5%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-full h-fit">
 						<motion.img
 							src="/assets/hero-1.webp"
 							alt="Overlay 1"
-							className="w-60 shadow-md rounded-2xl"
-							initial={{ y: 50, opacity: 0 }}
-							animate={{ y: [-2, 2, -2], opacity: 1 }}
+							className="w-57 shadow-md rounded-2xl"
+							initial={{ opacity: 0 }}
+							animate={{ y: [-1, 1, -1], opacity: 1 }}
 							transition={{
 								opacity: { duration: 0.5, delay: 0.3 },
 								y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 },
@@ -51,9 +51,9 @@ const HeroSection: React.FC = () => {
 						<motion.img
 							src="/assets/hero-2.webp"
 							alt="Overlay 2"
-							className="w-60 shadow-md rounded-2xl"
-							initial={{ y: 50, opacity: 0 }}
-							animate={{ y: [-2, 2, -2], opacity: 1 }}
+							className="w-57 shadow-md rounded-2xl"
+							initial={{ opacity: 0 }}
+							animate={{ y: [-1, 1, -1], opacity: 1 }}
 							transition={{
 								opacity: { duration: 0.5, delay: 0.6 },
 								y: { repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 0.6 },
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
 					<motion.img
 						src="/assets/hero-3.webp"
 						alt="Overlay 3"
-						className="absolute w-110 bottom-[6%] right-[0%] "
+						className="absolute w-100 bottom-[6%] right-[0%] "
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: [-2, 2, -2], opacity: 1 }}
 						transition={{
@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
 					<motion.img
 						src="/assets/hero-4.webp"
 						alt="Overlay 4"
-						className="absolute bottom-[45%] left-[0%] w-130"
+						className="absolute bottom-[45%] left-[0%] w-120"
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: [-2, 2, -2], opacity: 1 }}
 						transition={{

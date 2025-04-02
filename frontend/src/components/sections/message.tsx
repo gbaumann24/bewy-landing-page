@@ -12,7 +12,7 @@ const MessageSection: React.FC = () => {
 				<div className="block xs:hidden">
 					<TextGenerateEffect
 						words={wordsDesktop}
-						className="text-6xl xs:text-4xl tracking-tight absolute inset-0 leading-14 xs:text-left font-semibold flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
+						className="text-7xl xs:text-4xl tracking-tight absolute inset-0  xs:text-left font-bold  flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
 						duration={0.5}
 					/>
 				</div>

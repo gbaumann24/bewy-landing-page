@@ -12,7 +12,7 @@ const OnboardingSection: React.FC = () => {
 			</div>
 			{/* Left Column - Content */}
 			<div className="flex-1 flex flex-col h-full w-full justify-center">
-				<H1 className=" mb-12">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
+				<H1 className="leading-14 mb-12">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
 				<Step
 					icon={<Star size={'18px'} />}
 					title="Wahl des Service-Levels"

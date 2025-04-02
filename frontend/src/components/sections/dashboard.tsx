@@ -1,6 +1,7 @@
 import { H1, P } from '@/lib/typography';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { CircleCheck } from 'lucide-react';
 
 const DashboardSection: React.FC = () => {
 	return (
@@ -8,14 +9,26 @@ const DashboardSection: React.FC = () => {
 			<div className="container mx-auto h-lvh max-h-[1100px] flex xs:flex-col items-center justify-center gap-12 xs:gap-0">
 				{/* Left Column - Content */}
 				<div className="flex-1">
-					<H1 className="mb-4">
-						Ihr persönliches <br /> Immobilien-Cockpit
-					</H1>
-					<P className="text-neutral-500 mb-8 w-6/7 xs:w-full">
+					<H1 className="mb-4 leading-14">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>
+					<P className="text-neutral-500 mb-4 w-6/7 xs:w-full">
 						Unser Eigentümerportal ermöglicht Ihnen jederzeit und von überall den Zugang zu allen relevanten Informationen rund um Ihre Liegenschaft – von Mietzinseinnahmen und
-						Leerbestände bis hin zu Mieterwechseln oder Handwerkerofferten. So behalten Sie stets die Übersicht und können bei Bedarf fundierte Entscheidungen treffen, ohne auf
-						Ihren Bewirtschafter angewiesen zu sein.
+						Leerbestände bis hin zu Mieterwechseln oder Handwerkerofferten.
 					</P>
+					<div className="ml-3">
+						<ul className="space-y-2">
+							{[
+								'Historie aller Aktivitäten rund um Ihre Immobilie',
+								'Übersicht über alle relevante Finanzen & Kennzahlen',
+								'Einblick in Leerstände und Immobilienwert',
+								'Information zu Mieterwechseln und Sanierungsprojekten',
+							].map((item, index) => (
+								<li key={index} className="flex items-center gap-2">
+									<CircleCheck className="text-white " fill="#E47839" size={16} />
+									<span className=" text-muted-foreground">{item}</span>
+								</li>
+							))}
+						</ul>
+					</div>
 					{/* <button className="flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-lg">
 					<ButtonText>Mehr Erfahren</ButtonText>
 				</button> */}
