@@ -5,7 +5,7 @@ import path from 'path';
 import { sendContactEmail } from './mailer';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 app.use(express.json());
 
@@ -59,6 +59,6 @@ app.get(/(.*)/, (req, res, next) => {
 	});
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '127.0.0.1', () => {
 	console.log(`🚀 Server läuft auf http://localhost:${PORT}`);
 });
