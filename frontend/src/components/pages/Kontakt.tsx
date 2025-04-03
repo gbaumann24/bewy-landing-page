@@ -6,33 +6,62 @@ import { Button } from '@/components/ui/button';
 import { Check, SendHorizonal } from 'lucide-react';
 import { H1, P } from '@/lib/typography';
 import { Link } from 'react-router-dom';
+import { Checkbox } from '../ui/checkbox';
 
 export default function Kontakt() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [inputData, setInputData] = useState({
+		firstname: '',
+		lastname: '',
+		email: '',
+		phone: '',
+		message: '',
+		broschure: false,
+	});
+
+	function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+		const { id, value } = e.target;
+		setInputData((prev) => ({ ...prev, [id]: value }));
+	}
+
+	function handleCheckboxChange(checked: boolean) {
+		setInputData((prev) => ({ ...prev, broschure: checked }));
+	}
 
 	async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 		setIsSubmitting(true);
 
-		// Simulate form submission
-		setTimeout(() => {
-			setIsSubmitting(false);
-			setIsSubmitted(true);
+		try {
+			const res = await fetch('http://localhost:3000/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(inputData),
+			});
 
-			// Reset form after showing success message
-			setTimeout(() => {
-				setIsSubmitted(false);
-				(event.target as HTMLFormElement).reset();
-			}, 3000);
-		}, 1500);
+			const data = await res.json();
+			console.log(data);
+			if (data.success === true) {
+				console.log('Nachricht erfolgreich gesendet!');
+				setTimeout(() => {}, 10000);
+				setIsSubmitted(true);
+			}
+		} catch (error) {
+			alert('Fehler beim Senden');
+			console.error(error);
+		} finally {
+			setIsSubmitting(false);
+		}
 	}
 
 	return (
-		<div className="w-screen flex flex-row mx-auto  h-screen items-center justify-center ">
+		<div className="w-screen flex flex-row mx-auto h-screen items-center justify-center">
 			<div className="w-1/2 px-26">
 				<Link to="/">
-					<Button className=" fixed top-6 left-6 cursor-pointer" variant={'outline'} size={'lg'}>
+					<Button className="fixed top-6 left-6 cursor-pointer" variant={'outline'} size={'lg'}>
 						Zurück
 					</Button>
 				</Link>
@@ -45,27 +74,38 @@ export default function Kontakt() {
 						<div className="w-full">
 							<form onSubmit={handleSubmit}>
 								<div className="space-y-4">
-									<div className="flex flex-row  gap-4">
+									<div className="flex flex-row gap-4">
 										<div className="w-full space-y-2">
-											<Label htmlFor="firstName">Vorname</Label>
-											<Input id="firstName" required placeholder="Max" />
+											<Label htmlFor="firstname">Vorname</Label>
+											<Input id="firstname" value={inputData.firstname} onChange={handleChange} required placeholder="Max" />
 										</div>
 										<div className="w-full space-y-2">
-											<Label htmlFor="lastName">Nachname</Label>
-											<Input id="lastName" required placeholder="Mustermann" />
+											<Label htmlFor="lastname">Nachname</Label>
+											<Input id="lastname" value={inputData.lastname} onChange={handleChange} required placeholder="Mustermann" />
 										</div>
 									</div>
 									<div className="space-y-2">
 										<Label htmlFor="email">E-Mail</Label>
-										<Input id="email" type="email" required placeholder="ihre.email@example.com" />
+										<Input id="email" type="email" value={inputData.email} onChange={handleChange} required placeholder="ihre.email@example.com" />
 									</div>
 									<div className="space-y-2">
 										<Label htmlFor="phone">Telefon (optional)</Label>
-										<Input id="phone" type="tel" placeholder="xxx xxx xx xx" />
+										<Input id="phone" type="tel" value={inputData.phone} onChange={handleChange} placeholder="xxx xxx xx xx" />
 									</div>
 									<div className="space-y-2">
 										<Label htmlFor="message">Nachricht</Label>
-										<Textarea id="message" required placeholder="Wie können wir Ihnen helfen?" className="min-h-[120px]" />
+										<Textarea
+											id="message"
+											value={inputData.message}
+											onChange={handleChange}
+											required
+											placeholder="Wie können wir Ihnen helfen?"
+											className="min-h-[120px]"
+										/>
+									</div>
+									<div className="flex flex-row items-center gap-2">
+										<Checkbox id="broschure" checked={inputData.broschure} onCheckedChange={handleCheckboxChange} />
+										<Label htmlFor="broschure">Kostenlose Broschüre erhalten</Label>
 									</div>
 								</div>
 								<div>
@@ -73,7 +113,7 @@ export default function Kontakt() {
 										{isSubmitting ? (
 											<>
 												Wird gesendet...
-												<SendHorizonal className="mr-2 h-4 w-4" />
+												<SendHorizonal className="ml-2 h-4 w-4" />
 											</>
 										) : isSubmitted ? (
 											<>
@@ -83,7 +123,7 @@ export default function Kontakt() {
 										) : (
 											<>
 												Nachricht senden
-												<SendHorizonal className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-10" />
+												<SendHorizonal className="ml-2 h-4 w-4" />
 											</>
 										)}
 									</Button>
@@ -95,22 +135,6 @@ export default function Kontakt() {
 			</div>
 			<div className="relative h-full w-1/2 p-8 ">
 				<img src="/assets/kontakt-1.webp" alt="" className="rounded-2xl object-cover h-full w-full" />
-				{/* <div className="absolute bottom-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 p-6 backdrop-blur-xs border bg-white/60 rounded-lg shadow-lg">
-					<div className="space-y-3">
-						<div className="flex items-center">
-							<Mail className=" mr-3" size={'18px'} />
-							<span>info@bewy.ch</span>
-						</div>
-						<div className="flex items-center">
-							<Phone className=" mr-3" size={'18px'} />
-							<span>+41 12 345 67 89</span>
-						</div>
-						<div className="flex items-center">
-							<MapPin className=" mr-3" size={'18px'} />
-							<span>Musterstrasse 123, 8000 Zürich</span>
-						</div>
-					</div>
-				</div> */}
 			</div>
 		</div>
 	);

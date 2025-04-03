@@ -1,4 +1,4 @@
-import { ButtonText, H2 } from '@/lib/typography';
+import { ButtonText, H1 } from '@/lib/typography';
 import React, { useEffect, useState, useRef } from 'react';
 import DotBackground from '../ui/dot-bg';
 import { Building2, KeyRound } from 'lucide-react';
@@ -164,7 +164,7 @@ const FeatureSection: React.FC = () => {
 						<ButtonText>Stockwerkeigentum</ButtonText>
 					</button>
 				</div>
-				<H2 className="mb-6">{type === 'Miet' ? 'Kontrolle über Ihre Mietliegenschaft' : 'Kontrolle über Ihr Stockwerkeigentum'}</H2>
+				<H1 className="mb-6">{type === 'Miet' ? 'Für Mietliegenschaften' : 'Für Stockwerkeigentum'}</H1>
 
 				<div onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)} className="h-[500px]">
 					{type === 'Miet' ? (

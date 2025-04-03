@@ -10,6 +10,7 @@ export const Footer: React.FC = () => {
 					<a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse xs:mb-6">
 						<img src="/assets/logo-invert.webp" className="h-18" alt="Your Logo" />
 					</a>
+
 					<ul className="flex flex-wrap items-center text-sm text-white xs:flex-col xs:items-start xs:gap-2">
 						<li>
 							<Link to="/datenschutz" className="hover:text-secondary me-4 md:me-6">
