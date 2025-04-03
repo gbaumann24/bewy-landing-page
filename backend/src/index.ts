@@ -16,7 +16,7 @@ initDB().then((database) => {
 
 // const corsConfig = {
 // 	origin: 'http://localhost:5173',
-// 	methods: ['GET', 'POST'],
+// 	methods: ['GET', 'POST'],œ
 // 	allowedHeaders: ['Content-Type'],
 // };
 
