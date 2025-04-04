@@ -3,7 +3,7 @@ import { HandHeart } from 'lucide-react';
 import { H1, P } from '@/lib/typography';
 import GridBackground from '../ui/grid-bg';
 import { motion } from 'framer-motion';
-import { FlipWords } from '../ui/flip-words';
+// import { FlipWords } from '../ui/flip-words';
 import { BroschureApply } from '../ui/borschure-apply';
 
 const HeroSection: React.FC = () => {
