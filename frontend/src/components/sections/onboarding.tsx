@@ -16,7 +16,7 @@ const OnboardingSection: React.FC = () => {
 				<Step
 					icon={<Star size={'18px'} />}
 					title="Wahl des Service-Levels"
-					description="Wählen Sie das für Sie perfekte Servicelevel – individuell abgestimmt auf Ihre Bedürfnisse, Erwartungen und die Komplexität Ihrer Liegenschaft. Die Servicelevel können untenstehend verglichen werden."
+					description="Wählen Sie das Servicelevel, das perfekt zu Ihren Bedürfnissen, Erwartungen und der Komplexität Ihrer Liegenschaft passt. Eine detaillierte Vergleichsmöglichkeit der verschiedenen Servicelevels finden Sie untenstehend."
 				/>
 				<Step
 					icon={<MapPinHouse size={'18px'} />}

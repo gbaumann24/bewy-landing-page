@@ -29,7 +29,7 @@ export function BroschureApply() {
 		setIsSubmitting(true);
 
 		try {
-			const res = await fetch('http://localhost:3000/api/contact', {
+			const res = await fetch('https://bewy.ch/api/contact', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export function BroschureApply() {
 
 	return (
 		<>
-			<form onSubmit={handleSubmit} className="flex w-full mt-4 rounded-xl shadow-lg  xs:hidden focus-within:border-secondary">
+			<form onSubmit={handleSubmit} className="flex w-full mt-4 rounded-xl shadow-lg  xs:hidden focus-within:shadow-secondary/20">
 				<input
 					type="email"
 					value={email}
@@ -72,7 +72,7 @@ export function BroschureApply() {
 					}}
 					placeholder="max@muster.ch"
 					className={`flex-grow px-6 py-3 text-muted-foreground bg-white placeholder-gray-300 border rounded-l-xl focus:outline-none ${
-						error ? 'border-red-500' : 'border-secondary/40 focus-visible:border-secondary'
+						error ? 'border-red-500' : 'border-secondary focus-visible:shadow-secondary/20'
 					}`}
 				/>
 				<button

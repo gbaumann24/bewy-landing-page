@@ -1,8 +1,9 @@
 import React from 'react';
 import { H4, P } from '@/lib/typography';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, UserRoundCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Badge } from './badge';
 
 export interface PricingCardProps {
 	title: string;
@@ -17,6 +18,7 @@ export interface PricingCardProps {
 	buttonText: string;
 	onButtonClick: () => void;
 	containerClassName?: string;
+	kompetenzsumme: string;
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({
@@ -31,6 +33,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 	buttonText,
 	versammlung,
 	onButtonClick,
+	kompetenzsumme,
 	containerClassName,
 }) => {
 	return (
@@ -45,11 +48,15 @@ const PricingCard: React.FC<PricingCardProps> = ({
 						<P className="text-xs text-muted-foreground">pro Monat</P>
 					</div>
 				</div>
+				<Badge className="mt-4 bg-muted-foreground">
+					<UserRoundCheck />
+					Kompetenzsumme*: {kompetenzsumme}
+				</Badge>
 				<hr className="my-4 border-t border-gray-300" />
 				<div className="space-y-3">
 					{vorOrt && (
 						<div>
-							<P className="text-sm font-medium">Pysisch vor Ort</P>
+							<P className="text-sm font-medium">Persönlicher Kontakt</P>
 							<ul className="text-xs ml-2 space-y-1 mt-1">
 								{vorOrt.map((item, index) => (
 									<li key={index} className="flex items-center">

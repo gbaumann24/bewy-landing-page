@@ -6,28 +6,28 @@ import { CircleCheck } from 'lucide-react';
 const DashboardSection: React.FC = () => {
 	return (
 		<div className="relative">
-			<div className="container mx-auto h-lvh max-h-[1100px] flex xs:flex-col items-center justify-center gap-12 xs:gap-0">
+			<div className="container mx-auto h-lvh max-h-[1100px] flex xs:flex-col items-center justify-center gap-12 xs:gap-0 xs:mb-40">
 				{/* Left Column - Content */}
 				<div className="flex-1">
 					<H1 className="mb-4 leading-14">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>
-					<P className="text-neutral-500 mb-4 w-6/7 xs:w-full">
-						Unser Eigentümerportal ermöglicht Ihnen jederzeit und von überall den Zugang zu allen relevanten Informationen rund um Ihre Liegenschaft – von Mietzinseinnahmen und
-						Leerbestände bis hin zu Mieterwechseln oder Handwerkerofferten.
+					<P className="text-neutral-500 mb-7 w-6/7 xs:w-full">
+						Mit unserem Eigentümerportal haben Sie jederzeit und von überall einfachen Zugang zu allen wesentlichen Informationen Ihrer Liegenschaft – von Mietzinseinnahmen und
+						Leerstandübersichten bis hin zu Mieterwechseln und Handwerkerofferten, alles zentral und effizient gebündelt.
 					</P>
-					<div className="ml-3">
-						<ul className="space-y-2">
+					<div className="ml-3 xs:mb-12 ">
+						<div className="space-y-4 xs:space-y-3">
 							{[
 								'Historie aller Aktivitäten rund um Ihre Immobilie',
 								'Übersicht über alle relevante Finanzen & Kennzahlen',
 								'Einblick in Leerstände und Immobilienwert',
 								'Information zu Mieterwechseln und Sanierungsprojekten',
 							].map((item, index) => (
-								<li key={index} className="flex items-center gap-2">
-									<CircleCheck className="text-white " fill="#E47839" size={16} />
-									<span className=" text-muted-foreground">{item}</span>
-								</li>
+								<div key={index} className="flex items-start gap-3">
+									<CircleCheck className="text-white min-w-[16px] xs:mt-1" fill="#E47839" size={16} />
+									<span className="text-muted-foreground text-sm xs:text-base">{item}</span>
+								</div>
 							))}
-						</ul>
+						</div>
 					</div>
 					{/* <button className="flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-lg">
 					<ButtonText>Mehr Erfahren</ButtonText>
@@ -39,7 +39,7 @@ const DashboardSection: React.FC = () => {
 					<img
 						src="/assets/dashboard_2.webp"
 						alt="Dashboard Image"
-						className="absolute top-0 w-full -right-3 h-full object-cover object-left overflow-hidden bg-transparent rounded-l-lg"
+						className="absolute top-0 w-full -right-4 h-[350px] object-cover object-left overflow-hidden bg-transparent rounded-l-lg"
 						style={{
 							boxShadow: '0 0px 10px 1px rgba(12, 12, 13, 0.1)',
 						}}

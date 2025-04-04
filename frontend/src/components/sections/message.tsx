@@ -19,7 +19,7 @@ const MessageSection: React.FC = () => {
 				<div className="hidden xs:block">
 					<TextGenerateEffect
 						words={wordsMobile}
-						className="text-6xl xs:text-4xl tracking-tight absolute inset-0 leading-14 xs:text-center font-semibold flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
+						className="xs:text-5xl tracking-tight absolute inset-0 xs:text-center font-bold flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
 						duration={0.5}
 					/>
 				</div>

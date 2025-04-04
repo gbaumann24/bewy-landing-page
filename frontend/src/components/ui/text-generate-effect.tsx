@@ -60,7 +60,7 @@ export const TextGenerateEffect = ({ words, className, filter = true, duration =
 	return (
 		<div className={cn('font-bold', className)}>
 			<div className="mt-4">
-				<div className=" dark:text-white text-black  leading-24  ">{renderWords()}</div>
+				<div className=" dark:text-white text-black  leading-24  xs:leading-18">{renderWords()}</div>
 			</div>
 		</div>
 	);

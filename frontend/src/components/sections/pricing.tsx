@@ -42,13 +42,14 @@ const Pricing: React.FC = () => {
 						title="Kompakt"
 						description="Effiziente Basisverwaltung für unkomplizierte Eigentümer."
 						price="CHF 60"
-						vorOrt={['1x Begehung pro Objekt']}
+						vorOrt={['1x Initiale Begehung pro Liegenschaft']}
 						eigentuemerkommunikation={['E-Mail', 'Notfall-Hotline']}
-						mieterkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Notfall-Hotline']}
+						mieterkommunikation={['Chatbot & Whatsapp', 'Telefon (KI-basiert)', 'E-Mail', 'Telefon auf Regie']}
 						portal={['Eingeschränkter Zugriff']}
 						mieterHandwerkerWahl={['Auswahl erfolgt durch unsere Verwaltung']}
 						buttonText="Kontakt"
 						onButtonClick={() => console.log('Button clicked!')}
+						kompetenzsumme="ab 3'500CHF"
 					/>
 					{/* Paket 2: Komfort-Plan */}
 					<PricingCard
@@ -56,26 +57,28 @@ const Pricing: React.FC = () => {
 						title="Komfort"
 						description="Erweiterte Betreuung mit vollem Portalzugang und flexibler Mietermix-Optimierung."
 						price="CHF 80"
-						vorOrt={['1x Begehung pro Objekt', '1x 1-2h Jahresanalyse']}
-						eigentuemerkommunikation={['E-Mail', 'Notfall-Hotline']}
-						mieterkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Notfall-Hotline']}
+						vorOrt={['Wie bei Kompakt', '1x 1-2h Jahresanalyse pro Eigentümer']}
+						mieterkommunikation={['Wie bei Kompakt', 'Notfall-Hotline']}
+						eigentuemerkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Notfall-Hotline']}
 						portal={['Uneingeschränkter Zugriff']}
 						mieterHandwerkerWahl={['Optional: Optimierung des Mietermixes']}
 						buttonText="Kontakt"
 						onButtonClick={() => console.log('Button clicked!')}
+						kompetenzsumme="ab 2'500CHF"
 					/>
 					{/* Paket 3: Rundum-Sorglos-Plan */}
 					<PricingCard
 						title="Premium"
 						description="Service mit persönlicher Beratung, strategischer Immobilienanalyse und umfassendem Support."
 						price="CHF 110"
-						vorOrt={['1x Begehung inkl. persönlicher Beratung', '1x 1-2h Jahresanalyse mit Mittagessen']}
-						eigentuemerkommunikation={['Direkte Durchwahl zu unserem Expertenteam']}
-						mieterkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Priorisierte Notfall-Hotline']}
+						vorOrt={['Wie bei Komfort', 'Mittagessen nach Jahresanalyse']}
+						mieterkommunikation={['Wie bei Kompakt', 'Telefon']}
+						eigentuemerkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Priorisierte Notfall-Hotline']}
 						portal={['Uneingeschränkter Zugriff']}
-						mieterHandwerkerWahl={['Optional: Bestimmung von Mietern & Handwerkern']}
+						mieterHandwerkerWahl={['Wie bei Komfort, zusätzlich', 'Optional: Bestimmung von Handwerkern', 'Optional: Auswahl von Mietenden']}
 						buttonText="Kontakt"
 						onButtonClick={() => console.log('Button clicked!')}
+						kompetenzsumme="ab 1'500CHF"
 					/>
 				</div>
 			)}
@@ -83,26 +86,19 @@ const Pricing: React.FC = () => {
 				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 xs:gap-6  w-full ">
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
-						title="Kompakt"
+						title="STWEG"
 						description="Kosteneffiziente Grundverwaltung für einfach strukturierte STWE-Gemeinschaften."
 						price="CHF 60"
 						portal={['Uneingeschränkter Zugriff']}
 						versammlung={['Wenn immer möglich schriftlich']}
 						buttonText="Kontakt"
 						onButtonClick={() => console.log('Button clicked!')}
-					/>
-					{/* Paket 2: Komfort-Plan */}
-					<PricingCard
-						title="Komplex"
-						description="Erweiterte Betreuung mit persönlichem Service für komplexere STWE-Gemeinschaften."
-						price="CHF 60"
-						portal={['Uneingeschränkter Zugriff']}
-						versammlung={['Optional: pysisch vor Ort']}
-						buttonText="Kontakt"
-						onButtonClick={() => console.log('Button clicked!')}
+						kompetenzsumme="ab 1'500CHF"
 					/>
 				</div>
 			)}
+
+			<P className='self-start text-xs text-muted-foreground'>* Die Kompetenzsumme bestimmt den Mindestbetrag, der jährlich für die Verwaltung Ihrer Immobilie anfällt.</P>
 		</div>
 	);
 };

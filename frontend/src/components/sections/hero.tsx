@@ -22,8 +22,8 @@ const HeroSection: React.FC = () => {
 					Zeitgemässe Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} />
 				</H1>
 				<P className="text-muted-foreground mb-8 ">
-					Mit Bewy als Ihre Immobilien Bewirtschaftung haben Sie Ihre Liegenschaft jederzeit im Blick – fachlich fundierte Begleitung, digitale Transparenz und ein Service, der
-					sich nach Ihren Bedürfnissen richtet.
+					Mit Bewy als Ihrem Partner in der Immobilienbewirtschaftung haben Sie Ihre Liegenschaft stets im Blick – profitieren Sie von fachlich fundierter Betreuung, digitaler
+					Transparenz und einem Service, der sich ganz nach Ihren individuellen Bedürfnissen richtet.
 				</P>
 				<BroschureApply />
 			</div>
