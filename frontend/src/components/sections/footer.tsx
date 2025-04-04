@@ -1,5 +1,5 @@
-import { H3, H4, P } from '@/lib/typography';
-import { Linkedin, Mail, Pin } from 'lucide-react';
+import {  H4, P } from '@/lib/typography';
+import { Pin } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
