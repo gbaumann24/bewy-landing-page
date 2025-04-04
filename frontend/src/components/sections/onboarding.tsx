@@ -5,7 +5,7 @@ import { Handshake, MapPinHouse, Star, TrendingUp } from 'lucide-react';
 
 const OnboardingSection: React.FC = () => {
 	return (
-		<div className="container mx-auto h-lvh xs:h-fit max-h-[900px] xs:max-h-none xs:flex-col-reverse flex py-24 items-center justify-center gap-12">
+		<div className="container mx-auto h-lvh xs:h-fit max-h-[900px] xs:max-h-none xs:flex-col-reverse flex py-24 mt-14 items-center justify-center gap-12">
 			{/* Right Column - Image */}
 			<div className="flex-1 bg-transparent h-full max-h-[600px] xs:h-80 xs:w-full">
 				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-2xl" />

@@ -19,7 +19,8 @@ const HeroSection: React.FC = () => {
 					<span>Mietliegenschaften & Stockwerkeigentum</span>
 				</div>
 				<H1 className="mb-4 leading-14">
-					Zeitgemässe Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} />
+					Die neue Generation der Immobilien Bewirtschaftung
+					{/* Zeitgemässe Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} /> */}
 				</H1>
 				<P className="text-muted-foreground mb-8 ">
 					Mit Bewy als Ihrem Partner in der Immobilienbewirtschaftung haben Sie Ihre Liegenschaft stets im Blick – profitieren Sie von fachlich fundierter Betreuung, digitaler

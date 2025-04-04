@@ -6,7 +6,7 @@ import { CircleCheck } from 'lucide-react';
 const DashboardSection: React.FC = () => {
 	return (
 		<div className="relative">
-			<div className="container mx-auto h-lvh max-h-[1100px] flex xs:flex-col items-center justify-center gap-12 xs:gap-0 xs:mb-40">
+			<div className="container mx-auto h-lvh max-h-[1100px] xs:h-[900px] flex xs:flex-col items-center justify-center gap-12 xs:gap-0 xs:mb-40">
 				{/* Left Column - Content */}
 				<div className="flex-1">
 					<H1 className="mb-4 leading-14">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>

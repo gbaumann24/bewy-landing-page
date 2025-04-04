@@ -50,7 +50,7 @@ const Home: React.FC = () => {
 	}, [activeView]);
 
 	return (
-		<>
+		<div className='xs:overflow-x-clip'>
 			<Navbar setView={setView} activeView={activeView} />
 
 			<section className="home flex w-full h-fit items-center justify-center">
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
 
 			{/* Cookie Consent Banner */}
 			{/* <CookieConsent /> */}
-		</>
+		</div>
 	);
 };
 

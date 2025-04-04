@@ -160,12 +160,13 @@ const Navbar: React.FC<NavbarProps> = ({
 										{item.label}
 									</div>
 								))}
-								<button
+								<Link
+									to="/kontakt"
 									className={`mt-4 w-full xs:w-3/4 py-3 text-center text-[15px] cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors rounded-xl`}
 									onClick={() => setIsOpen(false)}
 								>
 									<ButtonText>Kontakt</ButtonText>
-								</button>
+								</Link>
 							</div>
 						</motion.div>
 					</div>

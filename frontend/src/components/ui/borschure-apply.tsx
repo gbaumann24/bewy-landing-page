@@ -70,7 +70,7 @@ export function BroschureApply() {
 						setEmail(e.target.value);
 						if (error) setError('');
 					}}
-					placeholder="max@muster.ch"
+					placeholder="ihre.email@beispiel.ch"
 					className={`flex-grow px-6 py-3 text-muted-foreground bg-white placeholder-gray-300 border rounded-l-xl focus:outline-none ${
 						error ? 'border-red-500' : 'border-secondary focus-visible:shadow-secondary/20'
 					}`}
@@ -88,7 +88,7 @@ export function BroschureApply() {
 			{error && <p className="text-red-500 text-sm mt-1 xs:hidden">{error}</p>}
 			{sucess && <p className="text-secondary text-sm mt-1 xs:hidden">{sucess}</p>}
 
-			<form onSubmit={handleSubmit} className="hidden xs:flex flex-col gap-3">
+			<form onSubmit={handleSubmit} className="hidden xs:flex flex-col gap-3 focus-within:shadow-secondary/20">
 				<input
 					type="email"
 					value={email}
@@ -96,9 +96,9 @@ export function BroschureApply() {
 						setEmail(e.target.value);
 						if (error) setError('');
 					}}
-					placeholder="hans@beispiel.com"
-					className={`flex-grow px-6 py-3 text-muted-foreground bg-white placeholder-gray-300 border rounded-xl focus:outline-none ${
-						error ? 'border-red-500' : 'border-secondary/40 focus-visible:border-secondary'
+					placeholder="ihre.email@beispiel.ch"
+					className={`flex-grow px-6 py-3 text-muted-foreground shadow-sm bg-white placeholder-gray-300 focus-visible:shadow-secondary/20 border rounded-xl focus:outline-none ${
+						error ? 'border-red-500' : 'border-secondary focus-visible:border-secondary'
 					}`}
 				/>
 				{error && <p className="text-red-500 text-sm -mt-2">{error}</p>}
@@ -106,7 +106,7 @@ export function BroschureApply() {
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className={`w-full bg-secondary border border-secondary items-center justify-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-xl flex ${
+					className={`w-full shadow-sm bg-secondary border border-secondary items-center justify-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-xl flex ${
 						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 					}`}
 				>
