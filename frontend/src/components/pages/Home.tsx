@@ -64,10 +64,10 @@ const Home: React.FC = () => {
 			</section>
 			<section className="portal relative overflow-x-clip">
 				<DashboardSection />
-				<div className="xs:block hidden">
+				<div className="lg:block hidden">
 					<FeatureMobileSection />
 				</div>
-				<div className="block xs:hidden">
+				<div className="block lg:hidden">
 					<FeatureSection />
 				</div>
 			</section>

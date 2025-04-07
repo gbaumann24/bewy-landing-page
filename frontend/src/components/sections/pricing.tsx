@@ -65,9 +65,9 @@ const Pricing: React.FC = () => {
 	};
 
 	return (
-		<div className="container mx-auto flex flex-col items-center justify-center gap-12 xs:gap-0 py-18 pb-34">
-			<div className="flex flex-col items-center justify-center w-3/5 xs:w-full gap-4">
-				<H1 className="xs:text-center leading-14 xs:leading-11">Unsere Serivcepakete</H1>
+		<div className="container mx-auto flex flex-col items-center justify-center gap-12 lg:gap-0 py-18 pb-34">
+			<div className="flex flex-col items-center justify-center w-3/5 md:w-full gap-4">
+				<H1 className="lg:text-center leading-14 lg:leading-11">Unsere Serivcepakete</H1>
 				<P className="text-muted-foreground text-center">
 					Unser Servicekonzept wurde massgeschneidert, um Ihre Immobilien bestmöglich zu betreuen. Dabei sind alle gängigen Bewirtschaftungs-Standartleistungen in jedem Preismodell
 					inbegriffen.
@@ -76,7 +76,7 @@ const Pricing: React.FC = () => {
 					<button
 						className={`${
 							type === 'Miet' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 xs:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
+						} px-6 lg:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
 						<Building2 size={'18px'} /> <ButtonText>Mietliegenschaft</ButtonText>
@@ -85,7 +85,7 @@ const Pricing: React.FC = () => {
 					<button
 						className={`${
 							type === 'Stwe' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 xs:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
+						} px-6 lg:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Stwe')}
 					>
 						<KeyRound size={'18px'} />
@@ -95,7 +95,7 @@ const Pricing: React.FC = () => {
 			</div>
 
 			{type === 'Miet' && (
-				<div className="flex flex-row xs:flex-col items-stretch justify-center gap-12 xs:gap-6 w-full">
+				<div className="flex flex-row lg:flex-col items-stretch justify-center gap-12 lg:gap-6 w-full">
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
 						title="Basis"
@@ -110,7 +110,7 @@ const Pricing: React.FC = () => {
 					/>
 					{/* Paket 2: Komfort-Plan */}
 					<PricingCard
-						containerClassName="shadow-xl scale-104 xs:scale-100 xs:shadow-none border-secondary/30 bg-secondary/10"
+						containerClassName="shadow-xl scale-104 lg:scale-100 lg:shadow-none border-secondary/30 bg-secondary/10"
 						title="Komfort"
 						description="Erweiterte Betreuung mit mehr Mitbestimmungsmöglichkeiten."
 						price="75"
@@ -137,11 +137,11 @@ const Pricing: React.FC = () => {
 				</div>
 			)}
 			{type === 'Stwe' && (
-				<div className="flex flex-col items-center justify-center gap-6 xs:gap-6 w-[500px] xs:w-full">
+				<div className="flex flex-col items-center justify-center gap-6 lg:gap-6 w-[500px] lg:w-full">
 					<StweSlider minOwners={3} maxOwners={50} defaultOwners={10} pricingData={pricingData} onValueChange={adjustPricing} />
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
-						containerClassName="shadow-xl xs:scale-100 xs:shadow-none border-secondary/30 bg-secondary/10"
+						containerClassName="shadow-xl lg:scale-100 lg:shadow-none border-secondary/30 bg-secondary/10"
 						title="Standart"
 						description="Digitale Bewirtschaftung für Stockwerkeigentums-Gemeinschaften jeglicher Grösse."
 						price={stwePrice.toString()}
@@ -155,7 +155,7 @@ const Pricing: React.FC = () => {
 			)}
 
 			{type === 'Miet' && (
-				<P className="self-start text-xs text-muted-foreground xs:mt-4">
+				<P className="self-start text-xs text-muted-foreground lg:mt-4">
 					* Die Kompetenzsumme definiert den finanziellen Rahmen, bis zu dem die Bewirtschaftung eigenständig Entscheidungen treffen kann.
 				</P>
 			)}

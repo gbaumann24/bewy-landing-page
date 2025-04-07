@@ -16,9 +16,9 @@ const ValuesSection: React.FC = () => {
 	};
 
 	return (
-		<div className="container flex xs:flex-col items-start justify-center gap-10 py-12">
+		<div className="container flex xs:flex-col items-start justify-center gap-10 py-12 lg:flex-wrap">
 			<motion.div
-				className="flex flex-1 w-full flex-col items-start justify-center border-t pt-5 xs:border-none xs:pt-10 xs:px-2"
+				className="flex min-w-50 flex-1 w-full flex-col items-start justify-center border-t pt-5 xs:border-none xs:pt-10 xs:px-2"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -34,7 +34,7 @@ const ValuesSection: React.FC = () => {
 				</P>
 			</motion.div>
 			<motion.div
-				className="flex flex-1 flex-col items-start justify-center border-t pt-5 xs:pt-10 xs:px-2"
+				className="flex flex-1 min-w-50 flex-col items-start justify-center border-t pt-5 xs:pt-10 xs:px-2"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -49,7 +49,7 @@ const ValuesSection: React.FC = () => {
 			</motion.div>
 
 			<motion.div
-				className="flex flex-col flex-1 items-start justify-center border-t pt-5 xs:pt-10 xs:px-2"
+				className="flex flex-col min-w-50 flex-1 items-start justify-center border-t pt-5 xs:pt-10 xs:px-2"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -64,7 +64,7 @@ const ValuesSection: React.FC = () => {
 			</motion.div>
 
 			<motion.div
-				className="flex flex-col flex-1 items-start justify-center border-t pt-5 xs:pt-10 xs:px-2"
+				className="flex flex-col min-w-50 flex-1 items-start justify-center border-t pt-5 xs:pt-10 xs:px-2"
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"

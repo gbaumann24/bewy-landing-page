@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 export function H1({ children, className }: { children: React.ReactNode; className?: string }) {
-	return <h1 className={cn('scroll-m-20 font-bold leading-tight tracking-tight text-5xl lg:text-xl xs:text-[44px]', className)}>{children}</h1>;
+	return <h1 className={cn('scroll-m-20 font-bold leading-tight tracking-tight text-5xl  xs:text-[44px]', className)}>{children}</h1>;
 }
 
 export function H2({ children, className }: { children: React.ReactNode; className?: string }) {

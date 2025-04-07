@@ -6,11 +6,11 @@ import { CircleCheck } from 'lucide-react';
 const DashboardSection: React.FC = () => {
 	return (
 		<div className="relative">
-			<div className="container mx-auto h-lvh max-h-[1100px] xs:h-[900px] flex xs:flex-col items-center justify-center gap-12 xs:gap-0 xs:mb-40">
+			<div className="container mx-auto h-lvh max-h-[1100px] xs:h-[900px] flex xs:flex-col items-center justify-center gap-12 lg:gap-0 xs:gap-0 xs:mb-40">
 				{/* Left Column - Content */}
 				<div className="flex-1">
 					<H1 className="mb-4  leading-14 xs:leading-11">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>
-					<P className="text-neutral-500 mb-7 w-6/7 xs:w-full">
+					<P className="text-neutral-500 mb-7 w-6/7 xs:w-full lg:w-full">
 						Mit unserem Eigentümerportal haben Sie jederzeit und von überall einfachen Zugang zu allen wesentlichen Informationen Ihrer Liegenschaft – von Mietzinseinnahmen und
 						Leerstandübersichten bis hin zu Mieterwechseln und Handwerkerofferten, alles zentral und effizient gebündelt.
 					</P>
@@ -51,7 +51,7 @@ const DashboardSection: React.FC = () => {
 			<motion.img
 				src="/assets/dashboard_2.webp"
 				alt="Dashboard Image"
-				className="xs:hidden absolute w-1/2 h-3/4 top-1/2 -translate-y-1/2 right-0 object-cover object-left overflow-visible bg-transparent rounded-l-4xl"
+				className="xs:hidden absolute w-1/2 h-3/4 top-1/2 -translate-y-1/2 right-0 lg:-right-10 object-cover object-left overflow-visible bg-transparent rounded-l-4xl"
 				style={{
 					boxShadow: '0 -5px 33px 1px rgba(12, 12, 13, 0.1)',
 				}}

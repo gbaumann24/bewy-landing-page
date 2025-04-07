@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
 					<img src="/assets/hero-0.webp" alt="Hero Image" className="h-full object-cover w-9/10 xl:w-full rounded-2xl" />
 
 					{/* Overlay images with sequential entrance */}
-					<div className="absolute -top-[5%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-full h-fit">
+					<div className="absolute -top-[5%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-full h-fit lg:flex-col">
 						<motion.img
 							src="/assets/hero-1.webp"
 							alt="Overlay 1"
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
 					<motion.img
 						src="/assets/hero-3.webp"
 						alt="Overlay 3"
-						className="absolute w-100 bottom-[6%] right-[0%] "
+						className="absolute w-100 bottom-[6%] right-[0%] lg:hidden"
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: [-2, 2, -2], opacity: 1 }}
 						transition={{
@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
 					<motion.img
 						src="/assets/hero-4.webp"
 						alt="Overlay 4"
-						className="absolute bottom-[45%] left-[0%] w-120"
+						className="absolute bottom-[45%] left-[0%] w-120 lg:hidden"
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: [-2, 2, -2], opacity: 1 }}
 						transition={{
@@ -92,11 +92,7 @@ const HeroSection: React.FC = () => {
 					<img src="/assets/hero-0.webp" alt="Hero Image" className=" h-full  object-cover w-9/10 rounded-2xl" />
 
 					{/* Use a wrapper div for triggering inView */}
-					<motion.div
-						initial="hidden"
-						animate="visible"
-						viewport={{ once: true, amount: 0.8 }}
-					>
+					<motion.div initial="hidden" animate="visible" viewport={{ once: true, amount: 0.8 }}>
 						<motion.img
 							src="/assets/hero-1.webp"
 							alt="Overlay 1"

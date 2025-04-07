@@ -96,14 +96,14 @@ const Navbar: React.FC<NavbarProps> = ({
 						</div>
 
 						{/* Mobile menu button - visible on md screens and below */}
-						<div className="hidden xs:flex items-center ">
+						<div className="hidden lg:flex items-center ">
 							<button onClick={() => setIsOpen(!isOpen)} className=" hover:text-secondary focus:outline-none" aria-label="Toggle menu">
 								{isOpen ? <X size={24} /> : <Menu size={24} />}
 							</button>
 						</div>
 
 						{/* Desktop Menu - hidden on screens below md */}
-						<div className="xs:hidden flex items-center space-x-8">
+						<div className="lg:hidden flex items-center space-x-8">
 							{items.map((item) => (
 								<div
 									key={item.label}
@@ -130,9 +130,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
 			<AnimatePresence>
 				{isOpen && (
-					<div className="hidden xs:block fixed top-0 left-0 w-screen h-screen bg-white z-100">
+					<div className="hidden lg:block fixed top-0 left-0 w-screen h-screen bg-white z-100">
 						<motion.div
-							className=" inset-0 bg-white backdrop-blur-sm hidden xs:block"
+							className=" inset-0 bg-white backdrop-blur-sm hidden lg:block"
 							initial={{ opacity: 0, y: -20 }}
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -20 }}
@@ -158,7 +158,7 @@ const Navbar: React.FC<NavbarProps> = ({
 								))}
 								<Link
 									to="/kontakt"
-									className={`mt-4 w-full xs:w-3/4 py-3 text-center text-[15px] cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors rounded-xl`}
+									className={`mt-4 w-full lg:w-3/4 py-3 text-center text-[15px] cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors rounded-xl`}
 									onClick={() => setIsOpen(false)}
 								>
 									<ButtonText>Kontakt</ButtonText>
