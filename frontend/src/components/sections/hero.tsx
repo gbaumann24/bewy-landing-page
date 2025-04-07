@@ -18,8 +18,8 @@ const HeroSection: React.FC = () => {
 					<HandHeart className=" w-4 h-4" />
 					<span>Mietliegenschaften & Stockwerkeigentum</span>
 				</div>
-				<H1 className="mb-4 leading-14 xs:leading-11">
-					Die neue <span className="text-secondary">Generation</span> der Immobilien Bewirtschaftung
+				<H1 className="mb-4 leading-14 text-6xl lg:text-5xl xs:leading-11">
+					Die <span className="text-secondary">neue Generation</span> der Immobilien Bewirtschaftung
 					{/* Zeitgemässe Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} /> */}
 				</H1>
 				<P className="text-muted-foreground mb-8 ">
@@ -91,30 +91,39 @@ const HeroSection: React.FC = () => {
 				<div className="relative w-full flex items-center justify-center">
 					<img src="/assets/hero-0.webp" alt="Hero Image" className=" h-full  object-cover w-9/10 rounded-2xl" />
 
-					<motion.img
-						src="/assets/hero-1.webp"
-						alt="Overlay 1"
-						className="absolute -top-[3%] left-1/2 -translate-x-4/5 flex items-center justify-center gap-4   w-50 shadow-md rounded-2xl"
-						initial={{ y: 50, opacity: 0 }}
-						animate={{ y: [-4, 4, -4], opacity: 1 }}
-						transition={{
-							opacity: { duration: 0.5, delay: 0.3 },
-							y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 },
-						}}
-						style={{ WebkitTransform: 'translate3d(0,0,0)' }}
-					></motion.img>
-					<motion.img
-						src="/assets/hero-2-mobile.webp"
-						alt="Overlay 1"
-						className="absolute -bottom-[3%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4  w-4/5 shadow-md rounded-2xl"
-						initial={{ y: 50, opacity: 0 }}
-						animate={{ y: [-4, 4, -4], opacity: 1 }}
-						transition={{
-							opacity: { duration: 0.5, delay: 0.3 },
-							y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 },
-						}}
-						style={{ WebkitTransform: 'translate3d(0,0,0)' }}
-					></motion.img>
+					{/* Use a wrapper div for triggering inView */}
+					<motion.div
+						initial="hidden"
+						animate="visible"
+						viewport={{ once: true, amount: 0.8 }}
+					>
+						<motion.img
+							src="/assets/hero-1.webp"
+							alt="Overlay 1"
+							className="absolute -top-[3%] left-1/2 -translate-x-4/5 flex items-center justify-center gap-4 w-50 shadow-md rounded-2xl"
+							initial={{ y: 50, opacity: 0 }}
+							whileInView={{ y: [-2, 2, -2], opacity: 1 }}
+							transition={{
+								opacity: { duration: 0.5, delay: 0.3 },
+								y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 },
+							}}
+							style={{ WebkitTransform: 'translate3d(0,0,0)' }}
+							viewport={{ once: true, amount: 0.8 }}
+						/>
+						<motion.img
+							src="/assets/hero-2-mobile.webp"
+							alt="Overlay 1"
+							className="absolute -bottom-[3%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-4/5 shadow-md rounded-2xl"
+							initial={{ y: 50, opacity: 0 }}
+							whileInView={{ y: [-2, 2, -2], opacity: 1 }}
+							transition={{
+								opacity: { duration: 0.5, delay: 0.3 },
+								y: { repeat: Infinity, duration: 4, ease: 'easeInOut', delay: 0.3 },
+							}}
+							style={{ WebkitTransform: 'translate3d(0,0,0)' }}
+							viewport={{ once: true, amount: 0.8 }}
+						/>
+					</motion.div>
 				</div>
 			</div>
 		</div>

@@ -24,7 +24,7 @@ const DashboardSection: React.FC = () => {
 							].map((item, index) => (
 								<div key={index} className="flex items-start gap-3 ">
 									<CircleCheck className="text-white min-w-[20px] xs:mt-1 " fill="#E47839" size={20} />
-									<span className="text-muted-foreground text-sm xs:text-base">{item}</span>
+									<span className="text-muted-foreground ">{item}</span>
 								</div>
 							))}
 						</div>

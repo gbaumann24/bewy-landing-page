@@ -3,15 +3,74 @@ import React from 'react';
 import { P } from '../../lib/typography';
 import PricingCard from '../ui/pricebox';
 import { Building2, KeyRound } from 'lucide-react';
+import { StweSlider } from '../ui/stwe-slider';
+
+const pricingData = [
+	{ user: 3, price: 84 },
+	{ user: 4, price: 83 },
+	{ user: 5, price: 81 },
+	{ user: 6, price: 80 },
+	{ user: 7, price: 79 },
+	{ user: 8, price: 78 },
+	{ user: 9, price: 77 },
+	{ user: 10, price: 75 },
+	{ user: 11, price: 74 },
+	{ user: 12, price: 73 },
+	{ user: 13, price: 72 },
+	{ user: 14, price: 71 },
+	{ user: 15, price: 70 },
+	{ user: 16, price: 69 },
+	{ user: 17, price: 68 },
+	{ user: 18, price: 67 },
+	{ user: 19, price: 66 },
+	{ user: 20, price: 65 },
+	{ user: 21, price: 64 },
+	{ user: 22, price: 63 },
+	{ user: 23, price: 62 },
+	{ user: 24, price: 61 },
+	{ user: 25, price: 60 },
+	{ user: 26, price: 59 },
+	{ user: 27, price: 58 },
+	{ user: 28, price: 58 },
+	{ user: 29, price: 57 },
+	{ user: 30, price: 56 },
+	{ user: 31, price: 55 },
+	{ user: 32, price: 54 },
+	{ user: 33, price: 53 },
+	{ user: 34, price: 53 },
+	{ user: 35, price: 52 },
+	{ user: 36, price: 51 },
+	{ user: 37, price: 50 },
+	{ user: 38, price: 50 },
+	{ user: 39, price: 49 },
+	{ user: 40, price: 48 },
+	{ user: 41, price: 47 },
+	{ user: 42, price: 47 },
+	{ user: 43, price: 46 },
+	{ user: 44, price: 45 },
+	{ user: 45, price: 45 },
+	{ user: 46, price: 44 },
+	{ user: 47, price: 43 },
+	{ user: 48, price: 43 },
+	{ user: 49, price: 42 },
+	{ user: 50, price: 41 },
+];
 
 const Pricing: React.FC = () => {
 	const [type, setType] = React.useState('Miet');
+	const [stwePrice, setStwePrice] = React.useState(45);
+
+	const adjustPricing = (price: number) => {
+		setStwePrice(price);
+	};
+
 	return (
 		<div className="container mx-auto flex flex-col items-center justify-center gap-12 xs:gap-0 py-18 pb-34">
-			<div className="flex flex-col items-center justify-center w-3/5 xs:w-full gap-4 mb-4">
+			<div className="flex flex-col items-center justify-center w-3/5 xs:w-full gap-4">
 				<H1 className="xs:text-center leading-14 xs:leading-11">Unsere Serivcepakete</H1>
 				<P className="text-muted-foreground text-center">
-					Ob effiziente Basisverwaltung oder umfassender Rundum-Sorglos-Service – unsere Pakete sind massgeschneidert, um Ihre Immobilien optimal zu betreuen.
+					Unser Servicekonzept wurde massgeschneidert, um Ihre Immobilien bestmöglich zu betreuen. Dabei sind alle gängigen Bewirtschaftungs-Standartleistungen in jedem Preismodell
+					inbegriffen.
 				</P>
 				<div className="items-center mb-6 flex flex-row h-13  w-fit rounded-xl  bg-accent p-1 gap-1">
 					<button
@@ -36,69 +95,70 @@ const Pricing: React.FC = () => {
 			</div>
 
 			{type === 'Miet' && (
-				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 xs:gap-6 w-full">
+				<div className="flex flex-row xs:flex-col items-stretch justify-center gap-12 xs:gap-6 w-full">
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
-						title="Kompakt"
-						description="Effiziente Basisverwaltung für unkomplizierte Eigentümer."
-						price="CHF 60"
-						vorOrt={['1x Initiale Begehung pro Liegenschaft']}
-						eigentuemerkommunikation={['E-Mail', 'Notfall-Hotline']}
-						mieterkommunikation={['Chatbot & Whatsapp', 'Telefon (KI-basiert)', 'E-Mail', 'Telefon auf Regie']}
-						portal={['Eingeschränkter Zugriff']}
-						mieterHandwerkerWahl={['Auswahl erfolgt durch unsere Verwaltung']}
+						title="Basis"
+						description="Schlanke und effiziente Basisverwaltung für unkomplizierte Eigentümer."
+						price="60"
+						vorOrt={['1x Initiale Begehung pro Liegenschaft', 'Primär E-Mail']}
+						mieterkommunikation={['Whatsapp', 'E-Mail', 'Telefon']}
+						portal={['Uneingeschränkter Zugriff']}
+						mieterHandwerkerWahl={['Auswahl erfolgt durch Bewy']}
 						buttonText="Kontakt"
-						onButtonClick={() => console.log('Button clicked!')}
 						kompetenzsumme="ab 3'500CHF"
 					/>
 					{/* Paket 2: Komfort-Plan */}
 					<PricingCard
 						containerClassName="shadow-xl scale-104 xs:scale-100 xs:shadow-none border-secondary/30 bg-secondary/10"
 						title="Komfort"
-						description="Erweiterte Betreuung mit vollem Portalzugang und flexibler Mietermix-Optimierung."
-						price="CHF 80"
+						description="Erweiterte Betreuung mit mehr Mitbestimmungsmöglichkeiten."
+						price="75"
 						vorOrt={['Wie bei Kompakt', '1x 1-2h Jahresanalyse pro Eigentümer']}
-						mieterkommunikation={['Wie bei Kompakt', 'Notfall-Hotline']}
-						eigentuemerkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Notfall-Hotline']}
+						mieterkommunikation={['Wie bei Komfort']}
 						portal={['Uneingeschränkter Zugriff']}
-						mieterHandwerkerWahl={['Optional: Optimierung des Mietermixes']}
+						mieterHandwerkerWahl={['Optional: Bestimmung von Handwerkern']}
 						buttonText="Kontakt"
-						onButtonClick={() => console.log('Button clicked!')}
-						kompetenzsumme="ab 2'500CHF"
+						kompetenzsumme="ab 4'500CHF"
+						specialButton={true}
 					/>
 					{/* Paket 3: Rundum-Sorglos-Plan */}
 					<PricingCard
 						title="Premium"
-						description="Service mit persönlicher Beratung, strategischer Immobilienanalyse und umfassendem Support."
-						price="CHF 110"
-						vorOrt={['Wie bei Komfort', 'Mittagessen nach Jahresanalyse']}
-						mieterkommunikation={['Wie bei Kompakt', 'Telefon']}
-						eigentuemerkommunikation={['Chatbot & Whatsapp', 'KI-Telefon', 'E-Mail', 'Priorisierte Notfall-Hotline']}
+						description="Serivce mit maximaler Mitbestimmung und persönlicher Betreuung."
+						price="105"
+						vorOrt={['Wie bei Komfort', 'Primär Telefon & E-Mail']}
+						mieterkommunikation={['Wie bei Kompakt']}
 						portal={['Uneingeschränkter Zugriff']}
-						mieterHandwerkerWahl={['Wie bei Komfort, zusätzlich', 'Optional: Bestimmung von Handwerkern', 'Optional: Auswahl von Mietenden']}
+						mieterHandwerkerWahl={['Wie bei Komfort', 'Optional: Auswahl von Mietenden']}
 						buttonText="Kontakt"
-						onButtonClick={() => console.log('Button clicked!')}
-						kompetenzsumme="ab 1'500CHF"
+						kompetenzsumme="Frei Wählbar"
 					/>
 				</div>
 			)}
 			{type === 'Stwe' && (
-				<div className="flex flex-row xs:flex-col items-start justify-center gap-12 xs:gap-6  w-full ">
+				<div className="flex flex-col items-center justify-center gap-6 xs:gap-6 w-[500px] xs:w-full">
+					<StweSlider minOwners={3} maxOwners={50} defaultOwners={10} pricingData={pricingData} onValueChange={adjustPricing} />
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
-						title="STWEG"
-						description="Kosteneffiziente Grundverwaltung für einfach strukturierte STWE-Gemeinschaften."
-						price="CHF 60"
+						containerClassName="shadow-xl xs:scale-100 xs:shadow-none border-secondary/30 bg-secondary/10"
+						title="Standart"
+						description="Digitale Bewirtschaftung für Stockwerkeigentums-Gemeinschaften jeglicher Grösse."
+						price={stwePrice.toString()}
+						vorOrt={['1x Initiale Begehung pro Liegenschaft', 'Primär: E-Mail']}
 						portal={['Uneingeschränkter Zugriff']}
 						versammlung={['Wenn immer möglich schriftlich']}
 						buttonText="Kontakt"
-						onButtonClick={() => console.log('Button clicked!')}
-						kompetenzsumme="ab 1'500CHF"
+						specialButton={true}
 					/>
 				</div>
 			)}
 
-			<P className="self-start text-xs text-muted-foreground">* Die Kompetenzsumme bestimmt den Mindestbetrag, der jährlich für die Verwaltung Ihrer Immobilie anfällt.</P>
+			{type === 'Miet' && (
+				<P className="self-start text-xs text-muted-foreground xs:mt-4">
+					* Die Kompetenzsumme definiert den finanziellen Rahmen, bis zu dem die Bewirtschaftung eigenständig Entscheidungen treffen kann.
+				</P>
+			)}
 		</div>
 	);
 };

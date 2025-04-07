@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
 							<div className="flex flex-row items-center gap-2">
 								<Pin size={15} color="#E47839" fill="#E47839" className="self-start mt-1" />
 								<div className="text-xs leading-5">
-									<div className="font-semibold text-secondary"> Bewy AG</div>
+									<div className="font-semibold text-secondary"> Bewy Zürich</div>
 									Giesshübelstrasse 88 <br />
 									8045 Zürich
 									<br /> Schweiz
@@ -36,9 +36,9 @@ export const Footer: React.FC = () => {
 								<Pin size={15} color="#E47839" fill="#E47839" className="self-start mt-1" />
 								<div className="text-xs leading-5">
 									{' '}
-									<div className="font-semibold text-secondary"> Bewy AG</div>
-									Rüeggiswilrain 11 <br />
-									6045 Meggen
+									<div className="font-semibold text-secondary"> Bewy Luzern</div>
+									Dreilindenstrasse 41 <br />
+									6006 Luzern
 									<br /> Schweiz
 									<br />{' '}
 									<a className="hover:text-secondary" href="mailto:info@bewy.ch">
@@ -50,9 +50,9 @@ export const Footer: React.FC = () => {
 								<Pin size={15} color="#E47839" fill="#E47839" className="self-start mt-1" />
 								<div className="text-xs leading-5">
 									{' '}
-									<div className="font-semibold text-secondary"> Bewy AG</div>
-									Rüeggiswilrain 11 <br />
-									6045 Meggen
+									<div className="font-semibold text-secondary"> Bewy Aargau</div>
+									Siebenmatten 40 <br />
+									5032 Aarau Rohr
 									<br /> Schweiz
 									<br />{' '}
 									<a className="hover:text-secondary" href="mailto:info@bewy.ch">

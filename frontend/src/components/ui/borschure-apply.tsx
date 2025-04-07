@@ -62,7 +62,7 @@ export function BroschureApply() {
 
 	return (
 		<>
-			<form onSubmit={handleSubmit} className="flex w-full mt-4 rounded-xl shadow-lg  xs:hidden focus-within:shadow-secondary/20">
+			<form onSubmit={handleSubmit} className="flex w-6/7 mt-4 rounded-xl shadow-lg  xs:hidden focus-within:shadow-secondary/40">
 				<input
 					type="email"
 					value={email}
@@ -78,7 +78,7 @@ export function BroschureApply() {
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className={`cursor-pointer flex bg-secondary border border-secondary items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-r-xl ${
+					className={`cursor-pointer flex bg-secondary border border-secondary hover:bg-secondary/90 hover:border-secondary/90 items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-r-xl ${
 						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 					}`}
 				>
@@ -89,7 +89,7 @@ export function BroschureApply() {
 			{sucess && <p className="text-secondary text-sm mt-1 xs:hidden">{sucess}</p>}
 
 			<form onSubmit={handleSubmit} className="hidden xs:flex flex-col gap-3 focus-within:shadow-secondary/20">
-				<input
+				{/* <input
 					type="email"
 					value={email}
 					onChange={(e) => {
@@ -102,7 +102,7 @@ export function BroschureApply() {
 					}`}
 				/>
 				{error && <p className="text-red-500 text-sm -mt-2">{error}</p>}
-				{sucess && <p className="text-secondary text-sm -mt-2">{sucess}</p>}
+				{sucess && <p className="text-secondary text-sm -mt-2">{sucess}</p>} */}
 				<button
 					type="submit"
 					disabled={isSubmitting}
@@ -110,7 +110,7 @@ export function BroschureApply() {
 						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 					}`}
 				>
-					<ButtonText className="text-md">{isSubmitting ? 'Wird gesendet...' : 'Brochüre anfordern'}</ButtonText>
+					<ButtonText className="text-md">Kontaktieren Sie uns</ButtonText>
 				</button>
 			</form>
 		</>

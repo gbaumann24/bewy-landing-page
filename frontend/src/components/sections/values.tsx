@@ -22,7 +22,7 @@ const ValuesSection: React.FC = () => {
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 0.8 }}
 				custom={0}
 			>
 				<div className="flex flex-col xs:flex-row-reverse items-start xs:items-center w-full justify-between xs:pb-2">
@@ -38,7 +38,7 @@ const ValuesSection: React.FC = () => {
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 0.8 }}
 				custom={1}
 			>
 				<div className="flex flex-col xs:flex-row-reverse items-start xs:items-center w-full justify-between xs:pb-2">
@@ -53,7 +53,7 @@ const ValuesSection: React.FC = () => {
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 0.8 }}
 				custom={2}
 			>
 				<div className="flex flex-col xs:flex-row-reverse items-start xs:items-center w-full justify-between xs:pb-2">
@@ -68,7 +68,7 @@ const ValuesSection: React.FC = () => {
 				variants={valueVariants}
 				initial="hidden"
 				whileInView="visible"
-				viewport={{ once: true }}
+				viewport={{ once: true, amount: 0.8 }}
 				custom={3}
 			>
 				<div className="flex flex-col xs:flex-row-reverse items-start xs:items-center w-full justify-between xs:pb-2">
