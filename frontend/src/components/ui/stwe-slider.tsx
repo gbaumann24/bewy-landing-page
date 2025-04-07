@@ -17,7 +17,7 @@ interface StweSliderProps {
 
 export function StweSlider({ minOwners = 1, maxOwners = 10, defaultOwners = 1, pricingData, onValueChange }: StweSliderProps) {
 	const [owners, setOwners] = useState<number>(defaultOwners);
-	const [price, setPrice] = useState<number>(calculatePrice(defaultOwners));
+	const [, setPrice] = useState<number>(calculatePrice(defaultOwners));
 	const [custom, setCustom] = useState(false);
 
 	function calculatePrice(numOwners: number): number {
