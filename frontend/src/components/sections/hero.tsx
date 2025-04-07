@@ -18,8 +18,8 @@ const HeroSection: React.FC = () => {
 					<HandHeart className=" w-4 h-4" />
 					<span>Mietliegenschaften & Stockwerkeigentum</span>
 				</div>
-				<H1 className="mb-4 leading-14">
-					Die neue Generation der Immobilien Bewirtschaftung
+				<H1 className="mb-4 leading-14 xs:leading-11">
+					Die neue <span className="text-secondary">Generation</span> der Immobilien Bewirtschaftung
 					{/* Zeitgemässe Immobilien Bewirtschaftung mit Weitblick - <FlipWords words={['modern', 'strategisch', 'kundennah']} /> */}
 				</H1>
 				<P className="text-muted-foreground mb-8 ">

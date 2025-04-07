@@ -164,7 +164,7 @@ const FeatureSection: React.FC = () => {
 						<ButtonText>Stockwerkeigentum</ButtonText>
 					</button>
 				</div>
-				<H1 className="mb-6">{type === 'Miet' ? 'Für Mietliegenschaften' : 'Für Stockwerkeigentum'}</H1>
+				<H1 className="mb-6  leading-14 xs:leading-11">{type === 'Miet' ? 'Für Mietliegenschaften' : 'Für Stockwerkeigentum'}</H1>
 
 				<div onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)} className="h-[500px]">
 					{type === 'Miet' ? (

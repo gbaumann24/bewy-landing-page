@@ -131,21 +131,21 @@ const FeatureMobileSection: React.FC = () => {
 
 	return (
 		<div className="container mx-auto py-16 my-16">
-			<div className="flex flex-col  w-full">
-				<div className=" mb-6 flex flex-row h-13 w-fit rounded-xl bg-accent p-1 gap-1 mx-auto">
+			<div className="flex flex-col items-center w-full">
+				<div className="items-center mb-6 flex flex-row h-13  w-fit rounded-xl  bg-accent p-1 gap-1">
 					<button
 						className={`${
 							type === 'Miet' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
+						} px-6 xs:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
-						<Building2 size={'18px'} /> <ButtonText>Mieteigentum</ButtonText>
+						<Building2 size={'18px'} /> <ButtonText>Mietliegenschaft</ButtonText>
 					</button>
 
 					<button
 						className={`${
 							type === 'Stwe' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
+						} px-6 xs:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Stwe')}
 					>
 						<KeyRound size={'18px'} />
@@ -153,7 +153,7 @@ const FeatureMobileSection: React.FC = () => {
 					</button>
 				</div>
 
-				<H1 className="mb-6 text-center">{type === 'Miet' ? 'Kontrolle über Ihr Mieteigentum' : 'Kontrolle über Ihr Stockwerkeigentum'}</H1>
+				<H1 className="mb-6 text-center leading-11">{type === 'Miet' ? 'Für Miet-liegenschaften' : 'Für Stock-werkeigentum'}</H1>
 
 				{renderMobileAccordion()}
 			</div>

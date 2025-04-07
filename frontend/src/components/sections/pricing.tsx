@@ -9,7 +9,7 @@ const Pricing: React.FC = () => {
 	return (
 		<div className="container mx-auto flex flex-col items-center justify-center gap-12 xs:gap-0 py-18 pb-34">
 			<div className="flex flex-col items-center justify-center w-3/5 xs:w-full gap-4 mb-4">
-				<H1 className="xs:text-center">Unsere Serivcepakete</H1>
+				<H1 className="xs:text-center leading-14 xs:leading-11">Unsere Serivcepakete</H1>
 				<P className="text-muted-foreground text-center">
 					Ob effiziente Basisverwaltung oder umfassender Rundum-Sorglos-Service – unsere Pakete sind massgeschneidert, um Ihre Immobilien optimal zu betreuen.
 				</P>
@@ -17,7 +17,7 @@ const Pricing: React.FC = () => {
 					<button
 						className={`${
 							type === 'Miet' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
+						} px-6 xs:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Miet')}
 					>
 						<Building2 size={'18px'} /> <ButtonText>Mietliegenschaft</ButtonText>
@@ -26,7 +26,7 @@ const Pricing: React.FC = () => {
 					<button
 						className={`${
 							type === 'Stwe' ? 'bg-secondary text-white font-medium shadow-md' : 'bg-accent'
-						} px-6 xs:px-4 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
+						} px-6 xs:px-3 h-full w-full rounded-lg flex flex-row gap-2 items-center justify-center cursor-pointer`}
 						onClick={() => setType('Stwe')}
 					>
 						<KeyRound size={'18px'} />
@@ -98,7 +98,7 @@ const Pricing: React.FC = () => {
 				</div>
 			)}
 
-			<P className='self-start text-xs text-muted-foreground'>* Die Kompetenzsumme bestimmt den Mindestbetrag, der jährlich für die Verwaltung Ihrer Immobilie anfällt.</P>
+			<P className="self-start text-xs text-muted-foreground">* Die Kompetenzsumme bestimmt den Mindestbetrag, der jährlich für die Verwaltung Ihrer Immobilie anfällt.</P>
 		</div>
 	);
 };

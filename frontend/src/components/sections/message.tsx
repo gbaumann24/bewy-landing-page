@@ -20,7 +20,7 @@ const MessageSection: React.FC = () => {
 					<TextGenerateEffect
 						words={wordsMobile}
 						className="xs:text-5xl tracking-tight absolute inset-0 xs:text-center font-bold flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
-						duration={0.5}
+						duration={0.2}
 					/>
 				</div>
 			</div>

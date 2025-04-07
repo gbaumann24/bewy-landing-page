@@ -1,4 +1,4 @@
-import {  H4, P } from '@/lib/typography';
+import { H4, P } from '@/lib/typography';
 import { Pin } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
 							<img src="/assets/logo-invert.webp" className="h-18" alt="Your Logo" />
 						</a>
 						{/* <Linkedin color="white" /> */}
-						<P className="text-xs text-accent">Die moderne Immobilienbewirtschaftung.</P>
+						<P className="text-xs text-accent xs:mb-6">Die neue Generation der Immobilien Bewirtschaftung.</P>
 					</div>
 					<div className="flex flex-col  items-start gap-3 text-sm xs:items-start xs:gap-2">
 						<H4 className="text-white">Standorte</H4>
