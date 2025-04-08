@@ -147,7 +147,7 @@ const Pricing: React.FC = () => {
 						price={stwePrice.toString()}
 						vorOrt={['1x Initiale Begehung pro Liegenschaft', 'Primär: E-Mail']}
 						portal={['Uneingeschränkter Zugriff']}
-						versammlung={['Wenn immer möglich schriftlich']}
+						versammlung={['Schriftlich, Präsenz oder Hybrid']}
 						buttonText="Kontakt"
 						specialButton={true}
 					/>
