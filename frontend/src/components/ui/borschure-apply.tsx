@@ -1,5 +1,6 @@
 import { ButtonText } from '@/lib/typography';
 import { FormEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export function BroschureApply() {
 	const [email, setEmail] = useState('');
@@ -110,7 +111,9 @@ export function BroschureApply() {
 						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 					}`}
 				>
-					<ButtonText className="text-md">Kontaktieren Sie uns</ButtonText>
+					<Link to={'/kontakt'}>
+						<ButtonText className="text-md">Kontaktieren Sie uns</ButtonText>
+					</Link>
 				</button>
 			</form>
 		</>
