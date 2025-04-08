@@ -67,7 +67,7 @@ const Pricing: React.FC = () => {
 	return (
 		<div className="container mx-auto flex flex-col items-center justify-center gap-12 lg:gap-0 py-18 pb-34">
 			<div className="flex flex-col items-center justify-center w-3/5 md:w-full gap-4">
-				<H1 className="lg:text-center leading-14 lg:leading-11">Unsere Serivcepakete</H1>
+				<H1 className="lg:text-center leading-14 lg:leading-11">Unsere Servicepakete</H1>
 				<P className="text-muted-foreground text-center">
 					Unser Servicepakete wurde massgeschneidert, um Ihre Immobilien bestmöglich zu betreuen. Dabei sind alle gängigen Bewirtschaftungs-Standartleistungen in jedem Preismodell
 					inbegriffen.
