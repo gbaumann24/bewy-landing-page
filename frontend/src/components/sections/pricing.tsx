@@ -142,7 +142,7 @@ const Pricing: React.FC = () => {
 					{/* Paket 1: Kompakt-Plan */}
 					<PricingCard
 						containerClassName="shadow-xl lg:scale-100 lg:shadow-none border-secondary/30 bg-secondary/10"
-						title="Standart"
+						title="Standard"
 						description="Digitale Bewirtschaftung für Stockwerkeigentums-Gemeinschaften jeglicher Grösse."
 						price={stwePrice.toString()}
 						vorOrt={['1x Initiale Begehung pro Liegenschaft', 'Primär: E-Mail']}
