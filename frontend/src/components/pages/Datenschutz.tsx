@@ -36,9 +36,9 @@ const Datenschutz: React.FC = () => {
 								<h2 className="text-xl font-semibold">2. Verantwortlicher</h2>
 								<p className="text-muted-foreground">Verantwortlich für die Datenbearbeitungen, die wir hier beschreiben, ist:</p>
 								<p className="text-muted-foreground">
-									Bewy 
+									Gilles Baumann
 									<br />
-									Giesshübelstrasse 88	
+									Giesshübelstrasse 88
 									<br />
 									8045 Zürich
 									<br />
