@@ -36,15 +36,15 @@ const Datenschutz: React.FC = () => {
 								<h2 className="text-xl font-semibold">2. Verantwortlicher</h2>
 								<p className="text-muted-foreground">Verantwortlich für die Datenbearbeitungen, die wir hier beschreiben, ist:</p>
 								<p className="text-muted-foreground">
-									[Firmenname]
+									Bewy 
 									<br />
-									[Adresse]
+									Giesshübelstrasse 88	
 									<br />
-									[PLZ/Ort]
+									8045 Zürich
 									<br />
-									[E-Mail]
+									info@bewy.ch
 									<br />
-									[Telefon]
+									+41 76 545 24 09
 								</p>
 							</div>
 
@@ -78,7 +78,7 @@ const Datenschutz: React.FC = () => {
 								</p>
 							</div>
 
-							<Separator />
+							{/* <Separator />
 
 							<div className="space-y-2">
 								<h2 className="text-xl font-semibold">5. Cookies / Tracking und andere Technologien</h2>
@@ -91,9 +91,9 @@ const Datenschutz: React.FC = () => {
 									Sie können Ihren Browser so einstellen, dass er Sie vor dem Speichern von Cookies informiert, Cookies nur in bestimmten Fällen akzeptiert oder
 									generell ablehnt sowie bereits gespeicherte Cookies löscht.
 								</p>
-							</div>
+							</div> */}
 
-							<Separator />
+							{/* <Separator />
 
 							<div className="space-y-2">
 								<h2 className="text-xl font-semibold">6. Datenweitergabe und Datenübermittlung ins Ausland</h2>
@@ -105,12 +105,12 @@ const Datenschutz: React.FC = () => {
 									Diese Empfänger sind teilweise im Inland, können aber irgendwo auf der Erde sein. Sie müssen insbesondere mit der Übermittlung Ihrer Daten in
 									Länder ausserhalb der Schweiz und des Europäischen Wirtschaftsraums rechnen, in denen ein angemessener Datenschutz fehlen kann.
 								</p>
-							</div>
+							</div> */}
 
 							<Separator />
 
 							<div className="space-y-2">
-								<h2 className="text-xl font-semibold">7. Dauer der Aufbewahrung von Personendaten</h2>
+								<h2 className="text-xl font-semibold">5. Dauer der Aufbewahrung von Personendaten</h2>
 								<p className="text-muted-foreground">
 									Wir verarbeiten und speichern Ihre Personendaten, solange es für die Erfüllung unserer vertraglichen und gesetzlichen Pflichten oder sonst die mit
 									der Bearbeitung verfolgten Zwecke erforderlich ist, d.h. also zum Beispiel für die Dauer der gesamten Geschäftsbeziehung sowie darüber hinaus
@@ -121,7 +121,7 @@ const Datenschutz: React.FC = () => {
 							<Separator />
 
 							<div className="space-y-2">
-								<h2 className="text-xl font-semibold">8. Datensicherheit</h2>
+								<h2 className="text-xl font-semibold">6. Datensicherheit</h2>
 								<p className="text-muted-foreground">
 									Wir treffen angemessene technische und organisatorische Sicherheitsvorkehrungen zum Schutz Ihrer Personendaten vor unberechtigtem Zugriff und
 									Missbrauch.
@@ -131,7 +131,7 @@ const Datenschutz: React.FC = () => {
 							<Separator />
 
 							<div className="space-y-2">
-								<h2 className="text-xl font-semibold">9. Ihre Rechte</h2>
+								<h2 className="text-xl font-semibold">7. Ihre Rechte</h2>
 								<p className="text-muted-foreground">
 									Im Rahmen des auf Sie anwendbaren Datenschutzgesetzes haben Sie das Recht auf Auskunft, Berichtigung, Löschung, das Recht auf Einschränkung der
 									Datenbearbeitung und sonst dem Widerspruch gegen unsere Datenbearbeitungen sowie auf Herausgabe gewisser Personendaten zwecks Übertragung an eine
@@ -147,7 +147,7 @@ const Datenschutz: React.FC = () => {
 							<Separator />
 
 							<div className="space-y-2">
-								<h2 className="text-xl font-semibold">10. Änderungen</h2>
+								<h2 className="text-xl font-semibold">8. Änderungen</h2>
 								<p className="text-muted-foreground">
 									Wir können diese Datenschutzerklärung jederzeit ohne Vorankündigung anpassen. Es gilt die jeweils aktuelle, auf unserer Website publizierte
 									Fassung.

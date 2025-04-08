@@ -25,9 +25,9 @@ const Impressum: React.FC = () => {
 								<p className="text-muted-foreground">
 									Bewy AG
 									<br />
-									Musterstrasse 123
+									Giesshübelstrasse 88
 									<br />
-									CH-8000 Zürich
+									CH-8045 Zürich
 									<br />
 									Schweiz
 								</p>
@@ -38,7 +38,7 @@ const Impressum: React.FC = () => {
 							<div className="space-y-2">
 								<h2 className="text-xl font-semibold">Kontakt</h2>
 								<p className="text-muted-foreground">
-									Telefon: +41 44 123 45 67
+									Telefon: +41 76 545 24 09
 									<br />
 									E-Mail: info@bewy.ch
 									<br />
@@ -46,7 +46,7 @@ const Impressum: React.FC = () => {
 								</p>
 							</div>
 
-							<Separator />
+							{/* <Separator />
 
 							<div className="space-y-2">
 								<h2 className="text-xl font-semibold">Handelsregistereintrag</h2>
@@ -55,20 +55,29 @@ const Impressum: React.FC = () => {
 									<br />
 									Firmennummer: CHE-123.456.789
 								</p>
-							</div>
+							</div> */}
 
-							<Separator />
+							{/* <Separator />
 
 							<div className="space-y-2">
 								<h2 className="text-xl font-semibold">Mehrwertsteuer</h2>
 								<p className="text-muted-foreground">MWST-Nummer: CHE-123.456.789 MWST</p>
-							</div>
+							</div> */}
 
 							<Separator />
 
 							<div className="space-y-2">
 								<h2 className="text-xl font-semibold">Vertretungsberechtigte Person</h2>
-								<p className="text-muted-foreground">Max Mustermann, Geschäftsführer</p>
+								<p className="text-muted-foreground">Luca Serratore, Geschäftsführer</p>
+							</div>
+
+							<Separator />
+
+							<div className="space-y-2">
+								<h2 className="text-xl font-semibold">Rechtsform & Status</h2>
+								<p className="text-muted-foreground">
+									Bewy ist derzeit in Gründung. Ein Eintrag im Handelsregister sowie eine MWST-Nummer bestehen aktuell noch nicht.
+								</p>
 							</div>
 
 							<Separator />
