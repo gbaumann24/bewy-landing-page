@@ -2,7 +2,7 @@ import express from 'express';
 import { initDB } from './dblite';
 import cors from 'cors';
 import path from 'path';
-import { sendContactEmail } from './mailer';
+import { sendContactEmail, sendTrackingEmail } from './mailer';
 
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
@@ -57,6 +57,27 @@ app.get(/(.*)/, (req, res, next) => {
 			res.status(500).send('Fehler beim Laden der Datei.');
 		}
 	});
+});
+
+const pixel = Buffer.from('474946383961010001008000000000ffffff21f90401000000002c00000000010001000002024c01003b', 'hex');
+
+app.get('/track/:recipientId/:emailId', (req, res) => {
+	// Extracting the recipient and email identifiers from the URL
+	const { recipientId, emailId } = req.params;
+
+	// Log request details. In production, consider saving these details to a database.
+	console.log(`Opened email -> recipientId: ${recipientId}, emailId: ${emailId}, IP: ${req.ip}, User-Agent: ${req.get('User-Agent')}`);
+
+	sendTrackingEmail(recipientId, emailId, req.get('User-Agent'), req.ip);
+
+	// Set appropriate headers to indicate the file is a GIF and to prevent caching.
+	res.set('Content-Type', 'image/gif');
+	res.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+	res.set('Pragma', 'no-cache');
+	res.set('Expires', '0');
+
+	// Send the 1x1 pixel image as the response.
+	res.send(pixel);
 });
 
 app.listen(PORT, '127.0.0.1', () => {
