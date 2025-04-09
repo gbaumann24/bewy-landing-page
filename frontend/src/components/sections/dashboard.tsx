@@ -9,7 +9,8 @@ const DashboardSection: React.FC = () => {
 			<div className="container mx-auto h-lvh max-h-[1100px] xs:h-[900px] flex xs:flex-col items-center justify-center gap-12 lg:gap-0 xs:gap-0 xs:mb-40">
 				{/* Left Column - Content */}
 				<div className="flex-1">
-					<H1 className="mb-4  leading-14 xs:leading-11">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>
+					<H1 className="mb-4 lg:hidden leading-14 xs:leading-11">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>
+					<H1 className="mb-4 hidden lg:block leading-14 xs:leading-11">Ihr Immobilien Cockpit</H1>
 					<P className="text-neutral-500 mb-7 w-6/7 xs:w-full lg:w-full">
 						Mit unserem Eigentümerportal haben Sie jederzeit und von überall Zugang zu allen wesentlichen Informationen Ihrer Liegenschaft – von Mietzinseinnahmen und
 						Leerstandsübersichten bis hin zu Mieterwechseln und Handwerkerofferten, alles zentral und effizient gebündelt.

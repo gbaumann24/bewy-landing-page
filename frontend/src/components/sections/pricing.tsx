@@ -66,7 +66,7 @@ const Pricing: React.FC = () => {
 
 	return (
 		<div className="container mx-auto flex flex-col items-center justify-center gap-12 lg:gap-0 py-18 pb-34">
-			<div className="flex flex-col items-center justify-center w-3/5 md:w-full gap-4">
+			<div className="flex flex-col items-center justify-center w-3/5 lg:w-full gap-4">
 				<H1 className="lg:text-center leading-14 lg:leading-11">Unsere Servicepakete</H1>
 				<P className="text-muted-foreground text-center">
 					Unsere Servicepakete sind individuell auf Ihre Bedürfnisse abgestimmt und gewährleisten eine professionelle Betreuung Ihrer Immobilie. Dabei sind alle gängigen

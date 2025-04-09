@@ -34,8 +34,12 @@ const Navbar: React.FC<NavbarProps> = ({
 	const [scrolled, setScrolled] = useState(false);
 	const [scrollingDown, setScrollingDown] = useState(false);
 	const [lastScrollY, setLastScrollY] = useState(0);
+	const [scrollDelta, setScrollDelta] = useState(0);
 	const { scrollY } = useScroll();
 	const [items, setItems] = useState(itemsinits);
+
+	// Schwellenwert in Pixeln für Scrolländerung
+	const SCROLL_THRESHOLD = 50;
 
 	// Transform values for floating effect
 	const width = useTransform(scrollY, [0, 100], ['100%', '90%']);
@@ -48,11 +52,22 @@ const Navbar: React.FC<NavbarProps> = ({
 			const currentScrollY = window.scrollY;
 			setScrolled(currentScrollY > 20);
 
-			// Determine scroll direction
+			// Berechne die Scroll-Delta-Distanz
+			const delta = lastScrollY - currentScrollY;
+			const newScrollDelta = scrollDelta + delta;
+
+			// Prüfe Scroll-Richtung mit Schwellenwert
 			if (currentScrollY > lastScrollY) {
+				// Nach unten scrollen
+				setScrollDelta(0); // Zurücksetzen beim Runterscrollen
 				setScrollingDown(true);
-			} else {
+			} else if (newScrollDelta > SCROLL_THRESHOLD) {
+				// Nach oben scrollen (nur wenn Schwellenwert überschritten)
 				setScrollingDown(false);
+				setScrollDelta(0); // Zurücksetzen nach Überschreitung
+			} else {
+				// Akkumuliere Delta, aber ändere Richtung noch nicht
+				setScrollDelta(newScrollDelta);
 			}
 
 			setLastScrollY(currentScrollY);
@@ -60,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, [lastScrollY]);
+	}, [lastScrollY, scrollDelta]);
 
 	// Fix for isActive logic
 	useEffect(() => {

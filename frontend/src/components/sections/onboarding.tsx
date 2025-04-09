@@ -5,14 +5,18 @@ import { Handshake, MapPinHouse, Star, TrendingUp } from 'lucide-react';
 
 const OnboardingSection: React.FC = () => {
 	return (
-		<div className="container mx-auto h-lvh lg:h-fit max-h-[900px] lg:max-h-none lg:flex-col-reverse flex py-24 lg:py-0 mt-14  items-center justify-center gap-12">
+		<div className="container mx-auto h-lvh lg:h-fit max-h-[900px] lg:max-h-none lg:flex-col-reverse flex py-24 xs:mt-24 lg:py-0 mt-14  items-center justify-center gap-12">
 			{/* Right Column - Image */}
-			<div className="flex-1 bg-transparent h-full max-h-[600px] lg:h-80 lg:w-full">
+			<div className="flex-1 bg-transparent xs:hidden h-full max-h-[600px] lg:h-80 lg:w-full relative rounded-2xl" style={{ boxShadow: '-16px 16px 0px rgb(228, 120, 57, 0.6)' }}>
+				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-2xl" />
+			</div>
+			<div className="flex-1 bg-transparent hidden xs:block h-full max-h-[600px] lg:h-80 lg:w-full relative rounded-2xl">
 				<img src="/assets/onboarding-1.webp" alt="Dashboard Image" className="h-full object-cover object-center rounded-2xl" />
 			</div>
 			{/* Left Column - Content */}
 			<div className="flex-1 flex flex-col h-full w-full justify-center">
-				<H1 className=" mb-12 leading-14 lg:leading-11">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
+				<H1 className=" mb-12 xs:hidden leading-14 lg:leading-11">In wenigen Schritten zur digitalen Bewirtschaftung</H1>
+				<H1 className=" mb-12 hidden xs:block leading-14 lg:leading-11">Wenige Schritte zur digitalen Bewirtschaftung</H1>
 				<Step
 					icon={<Star size={'18px'} />}
 					title="Wahl des Service-Levels"

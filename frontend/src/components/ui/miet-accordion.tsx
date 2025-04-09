@@ -19,7 +19,7 @@ export const MietAccordion: React.FC<MietAccordionProps> = ({ accordionItem, set
 			value={accordionItem}
 		>
 			<AccordionItem value="item-1" className={cn('w-full', accordionItem === 'item-1' && progress < 100 && 'pointer-events-none')}>
-				<AccordionTrigger>Schnelle und reibungslose Vermietung</AccordionTrigger>
+				<AccordionTrigger>Schnelle & reibungslose Vermietung</AccordionTrigger>
 				<AccordionContent progress={progress}>
 					Automatisierte Bonitätsprüfungen, Kontrolle eines passenden Mieter-Mix und digitale Referenz-Checks ermöglichen fundierte Entscheidungen in Rekordzeit. Sie bestimmen
 					selbst, wie stark Sie in den Prozess eingebunden sein möchten, behalten aber jederzeit den Überblick.

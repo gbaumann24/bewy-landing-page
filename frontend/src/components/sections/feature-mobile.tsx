@@ -42,25 +42,25 @@ const FeatureMobileSection: React.FC = () => {
 		return (
 			<div className="border-b border-gray-200">
 				<button className={`w-full text-left py-4 px-2 flex justify-between items-center`} onClick={() => handleManualItemChange(itemId)}>
-					<span className={`${isActive ? 'font-semibold text-secondary' : ''}`}>{title}</span>
+					<span className={`${isActive ? 'font-semibold text-secondary text-lg' : 'text-lg'}`}>{title}</span>
 					<span className="transform transition-transform duration-300 ease-in-out">{!isActive ? <ChevronDownIcon size={'18px'} /> : <ChevronUpIcon size={'18px'} />}</span>
 				</button>
 
 				{isActive && (
 					<div className="px-2 pb-4 flex flex-col gap-4">
 						<div>{children}</div>
-						<div className="relative min-w-[350px] min-h-[350px] w-full h-full bg-transparent">
+						<div className="relative min-w-[350px] min-h-[350px] w-full h-full bg-transparent flex items-center justify-center">
 							<DotBackground />
 							<AnimatePresence mode="wait">
 								<motion.div
 									key={`${type}-${itemId}`}
-									className="w-full flex justify-center bg-transparent"
+									className="w-full lg:max-w-140 flex justify-center bg-transparent"
 									initial={{ opacity: 0, y: 10 }}
 									animate={{ opacity: 1, y: 0 }}
 									exit={{ opacity: 0, y: -10 }}
 									transition={{ duration: 0.3, ease: 'easeInOut' }}
 								>
-									<img src={getImageSrc()} alt={`Bild für ${title}`} className="w-full object-contain " />
+									<img src={getImageSrc()} alt={`Bild für ${title}`} className="w-full object-contain" />
 								</motion.div>
 							</AnimatePresence>
 						</div>
@@ -75,31 +75,27 @@ const FeatureMobileSection: React.FC = () => {
 		if (type === 'Miet') {
 			return (
 				<div className="w-full">
-					<MobileAccordionItem itemId="item-1" title="Schnelle und reibungslose Vermietung">
-						<P className="text-muted-foreground text-sm ">
+					<MobileAccordionItem itemId="item-1" title="Schnelle & reibungslose Vermietung">
+						<P className="text-muted-foreground  ">
 							Automatisierte Bonitätsprüfungen ermöglichen schnelle Entscheidungen. Sie bestimmen Ihre Einbindung selbst und behalten volle Kontrolle.
 						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-2" title="Mieterkommunikation">
-						<P className="text-muted-foreground text-sm">
-							Kommunikation via WhatsApp oder Mieterportal. Reparaturen, Anfragen und Dokumente zentral verfügbar – ohne Papierkram.
-						</P>
+						<P className="text-muted-foreground ">Kommunikation via WhatsApp oder Mieterportal. Reparaturen, Anfragen und Dokumente zentral verfügbar – ohne Papierkram.</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-3" title="Zustand, Wartung und Werterhalt">
-						<P className="text-muted-foreground text-sm">
+						<P className="text-muted-foreground ">
 							Bewy überwacht den Zustand Ihrer Immobilien. Wartungen und Instandhaltungen werden automatisch erkannt und durchgeführt. Lehnen Sie sich zurück, Bewy erledigt
 							den Rest.
 						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-4" title="Finanzen im Griff">
-						<P className="text-muted-foreground text-sm">
+						<P className="text-muted-foreground ">
 							Überblick über Mietzinsen und Renditen jederzeit verfügbar. Finanzkennzahlen sind grafisch aufbereitet, Echtzeit-Daten per Knopfdruck.
 						</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-5" title="Bewy AI">
-						<P className="text-muted-foreground text-sm">
-							KI-basierter Chatbot beantwortet Fragen rund um die Uhr. Sofortiger Zugriff auf relevante Informationen ohne Wartezeit.
-						</P>
+						<P className="text-muted-foreground ">KI-basierter Chatbot beantwortet Fragen rund um die Uhr. Sofortiger Zugriff auf relevante Informationen ohne Wartezeit.</P>
 					</MobileAccordionItem>
 				</div>
 			);
@@ -107,22 +103,18 @@ const FeatureMobileSection: React.FC = () => {
 			return (
 				<div className="w-full">
 					<MobileAccordionItem itemId="item-1" title="Zustand, Wartung und Werterhalt">
-						<P className="text-muted-foreground text-sm">
+						<P className="text-muted-foreground">
 							Bewy überwacht Ihre STWE-Liegenschaft laufend. Notwendige Massnahmen werden früh erkannt, Empfehlungen erstellt und für die Versammlung vorbereitet.
 						</P>
 					</MobileAccordionItem>
-					<MobileAccordionItem itemId="item-2" title="Versammlungen transparent dokumentiert">
-						<P className="text-muted-foreground text-sm">
-							Steuern Sie Versammlungen digital und transparent. Alle Unterlagen und Beschlüsse sind zentral und jederzeit einsehbar.
-						</P>
+					<MobileAccordionItem itemId="item-2" title="Transparente Versammlungen">
+						<P className="text-muted-foreground">Steuern Sie Versammlungen digital und transparent. Alle Unterlagen und Beschlüsse sind zentral und jederzeit einsehbar.</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-3" title="Finanzen jederzeit im Griff">
-						<P className="text-muted-foreground text-sm">Überblick über Budget, Rücklagen und Kosten stets verfügbar. Finanzdaten sind klar dokumentiert und abrufbar.</P>
+						<P className="text-muted-foreground">Überblick über Budget, Rücklagen und Kosten stets verfügbar. Finanzdaten sind klar dokumentiert und abrufbar.</P>
 					</MobileAccordionItem>
 					<MobileAccordionItem itemId="item-4" title="Bewy AI">
-						<P className="text-muted-foreground text-sm">
-							KI-basierter Chatbot beantwortet Fragen jederzeit zuverlässig. Direkter Zugang zu wichtigen Informationen ohne Verzögerung.
-						</P>
+						<P className="text-muted-foreground">KI-basierter Chatbot beantwortet Fragen jederzeit zuverlässig. Direkter Zugang zu wichtigen Informationen ohne Verzögerung.</P>
 					</MobileAccordionItem>
 				</div>
 			);
@@ -130,7 +122,7 @@ const FeatureMobileSection: React.FC = () => {
 	};
 
 	return (
-		<div className="container mx-auto py-16 my-16">
+		<div className="container mx-auto pb-16 my-16">
 			<div className="flex flex-col items-center w-full">
 				<div className="items-center mb-6 flex flex-row h-13  w-fit rounded-xl  bg-accent p-1 gap-1">
 					<button
@@ -153,7 +145,7 @@ const FeatureMobileSection: React.FC = () => {
 					</button>
 				</div>
 
-				<H1 className="mb-6 text-center leading-11">{type === 'Miet' ? 'Für Miet-liegenschaften' : 'Für Stock-werkeigentum'}</H1>
+				<H1 className="mb-6 text-center leading-11">{type === 'Miet' ? 'Für Mietliegen-schaften' : 'Für Stockwerk-eigentum'}</H1>
 
 				{renderMobileAccordion()}
 			</div>

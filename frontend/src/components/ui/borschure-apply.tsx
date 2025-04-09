@@ -104,17 +104,17 @@ export function BroschureApply() {
 				/>
 				{error && <p className="text-red-500 text-sm -mt-2">{error}</p>}
 				{sucess && <p className="text-secondary text-sm -mt-2">{sucess}</p>} */}
-				<button
-					type="submit"
-					disabled={isSubmitting}
-					className={`w-full shadow-sm bg-secondary border border-secondary items-center justify-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-xl flex ${
-						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-					}`}
-				>
-					<Link to={'/kontakt'}>
+				<Link to={'/kontakt'}>
+					<button
+						type="submit"
+						disabled={isSubmitting}
+						className={`w-full shadow-sm bg-secondary border border-secondary items-center justify-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-xl flex ${
+							isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+						}`}
+					>
 						<ButtonText className="text-md">Kontaktieren Sie uns</ButtonText>
-					</Link>
-				</button>
+					</button>
+				</Link>
 			</form>
 		</>
 	);
