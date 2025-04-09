@@ -48,19 +48,6 @@ app.use(express.static(distPath));
 
 console.log(`Serving static files from: ${distPath}`); // Debugging: Überprüfen Sie den Pfadå
 
-app.get(/(.*)/, (req, res, next) => {
-	const filePath = path.resolve(distPath, 'index.html');
-	console.log(`Serving file: ${filePath}`); // Debugging
-	res.sendFile(filePath, (err) => {
-		if (err) {
-			console.error('Fehler beim Senden der Datei:', err); // Debugging
-			res.status(500).send('Fehler beim Laden der Datei.');
-		}
-	});
-});
-
-const pixel = Buffer.from('474946383961010001008000000000ffffff21f90401000000002c00000000010001000002024c01003b', 'hex');
-
 app.get('/track/:recipientId/:emailId', (req, res) => {
 	// Extracting the recipient and email identifiers from the URL
 	const { recipientId, emailId } = req.params;
@@ -79,6 +66,19 @@ app.get('/track/:recipientId/:emailId', (req, res) => {
 	// Send the 1x1 pixel image as the response.
 	res.send(pixel);
 });
+
+app.get(/(.*)/, (req, res, next) => {
+	const filePath = path.resolve(distPath, 'index.html');
+	console.log(`Serving file: ${filePath}`); // Debugging
+	res.sendFile(filePath, (err) => {
+		if (err) {
+			console.error('Fehler beim Senden der Datei:', err); // Debugging
+			res.status(500).send('Fehler beim Laden der Datei.');
+		}
+	});
+});
+
+const pixel = Buffer.from('474946383961010001008000000000ffffff21f90401000000002c00000000010001000002024c01003b', 'hex');
 
 app.listen(PORT, '127.0.0.1', () => {
 	console.log(`🚀 Server läuft auf http://localhost:${PORT}`);
