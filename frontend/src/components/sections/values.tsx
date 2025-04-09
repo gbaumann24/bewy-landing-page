@@ -60,7 +60,10 @@ const ValuesSection: React.FC = () => {
 					<Star />
 					<H4 className="text-secondary mt-3 mb-4">Kompetent</H4>
 				</div>
-				<P className="text-muted-foreground"> Langfristig an Ihrer Seite mit klaren Prozessen, schneller Reaktionszeit und einem lösungsorientierten Verständnis für Ihre Immobilie.</P>
+				<P className="text-muted-foreground">
+					{' '}
+					Wir stehen langfristig an Ihrer Seite mit schneller Reaktionszeit und einem tiefgreifenden Verständnis für Ihre Immobilie.
+				</P>
 			</motion.div>
 
 			<motion.div

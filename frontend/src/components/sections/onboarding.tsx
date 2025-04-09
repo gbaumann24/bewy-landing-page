@@ -31,7 +31,7 @@ const OnboardingSection: React.FC = () => {
 				<Step
 					icon={<Handshake size={'18px'} />}
 					title="Übergabe & Steuerung im Eigentümerportal"
-					description="Alle Daten fliessen ins Eigentümerportal. Dort steuern und überwachen Sie Ihre Liegenschaft digital – mit voller Transparenz und jederzeitigem Zugriff."
+					description="Alle Daten fliessen ins Eigentümerportal. Dort steuern und überwachen Sie Ihre Liegenschaft mit voller Transparenz."
 				/>
 			</div>
 		</div>

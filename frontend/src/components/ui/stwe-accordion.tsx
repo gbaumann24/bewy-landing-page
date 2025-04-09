@@ -21,9 +21,9 @@ export const StweAccordion: React.FC<MietAccordionProps> = ({ progress, accordio
 			<AccordionItem value="item-1" className={cn('w-full', accordionItem === 'item-1' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Kontinuierlicher Werterhalt</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Bewy überwacht den baulichen Zustand Ihrer STWE-Liegenschaft kontinuierlich und erkennt notwendige Massnahmen frühzeitig. Anstehende Fälligkeiten werden automatisch
-					erfasst, mit intelligenten Empfehlungen ergänzt und nahtlos in die Traktandenliste der nächsten Eigentümerversammlung integriert. Holistische Zustandsberichte bieten
-					dabei einen umfassenden Überblick und schaffen eine gemeinsame Informationsbasis für alle Beteiligten – transparent, vorausschauend und effizient.
+					Wir von Bewy überwachen den baulichen Zustand Ihrer STWE-Liegenschaft kontinuierlich und erkennt notwendige Massnahmen frühzeitig. Anstehende Fälligkeiten werden
+					automatisch erfasst, mit intelligenten Empfehlungen ergänzt und nahtlos in die Traktandenliste der nächsten Eigentümerversammlung integriert. Holistische Zustandsberichte
+					bieten dabei einen umfassenden Überblick und schaffen eine gemeinsame Informationsbasis für alle Beteiligten.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-2" className={cn('w-full', accordionItem === 'item-2' && progress < 100 && 'pointer-events-none')}>
@@ -36,7 +36,7 @@ export const StweAccordion: React.FC<MietAccordionProps> = ({ progress, accordio
 			<AccordionItem value="item-3" className={cn('w-full', accordionItem === 'item-3' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Finanzen jederzeit im Griff</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Mit Bewy behalten alle Eigentümer den Überblick über Budget, Erneuerungsfonds, laufende Kosten und Abrechnungen. Finanzdaten sind in Echtzeit einsehbar, übersichtlich
+					Bei Bewy behalten alle Eigentümer den Überblick über Budget, Erneuerungsfonds, laufende Kosten und Abrechnungen. Finanzdaten sind in Echtzeit einsehbar, übersichtlich
 					aufbereitet und bereit zum Download. Vom Jahresabschluss bis zur individuellen Kostenverteilung – alle Zahlen sind nachvollziehbar dokumentiert und zentral verfügbar.
 				</AccordionContent>
 			</AccordionItem>

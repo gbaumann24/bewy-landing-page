@@ -28,14 +28,14 @@ export const MietAccordion: React.FC<MietAccordionProps> = ({ accordionItem, set
 			<AccordionItem value="item-2" className={cn('w-full', accordionItem === 'item-2' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Effektive Mieterkommunikation</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Ihre Mieter kommunizieren bequem über WhatsApp oder das Mieterportal. Reparaturmeldungen, Anfragen und Dokumentenzugriff – alles zentral, nachvollziehbar und ohne
-					Papierkram. So läuft die Kommunikation effizient, modern und ganz ohne Umwege – für mehr Zufriedenheit Ihrer Mietenden.
+					Ihre Mieter kommunizieren bequem über WhatsApp oder das Mieterportal. Reparaturmeldungen, Mietzinsauskünfte oder Dokumentenzugriff – alles zentral, nachvollziehbar und
+					ohne Papierkram. So läuft die Kommunikation ganz ohne Umwege – für mehr Zufriedenheit Ihrer Mietenden.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-3" className={cn('w-full', accordionItem === 'item-3' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Kontinuierlicher Werterhalt</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Bewy überwacht den baulichen Zustand Ihrer Liegenschaften kontinuierlich und erkennt notwendige Massnahmen frühzeitig. Fälligkeiten, Wartungen und notwendige
+					Wir von Bewy überwachen den baulichen Zustand Ihrer Liegenschaften kontinuierlich und erkennt notwendige Massnahmen frühzeitig. Fälligkeiten, Wartungen und notwendige
 					Instandhaltungsmassnahmen werden erkannt, gemeldet und effizient in die Wege geleitet. So sichern Sie den Werterhalt langfristig. Sie lehnen sich zurück, Bewy übernimmt
 					den Rest.
 				</AccordionContent>
@@ -43,8 +43,8 @@ export const MietAccordion: React.FC<MietAccordionProps> = ({ accordionItem, set
 			<AccordionItem value="item-4" className={cn('w-full', accordionItem === 'item-4' && progress < 100 && 'pointer-events-none')}>
 				<AccordionTrigger>Übersichtliche Finanzen</AccordionTrigger>
 				<AccordionContent progress={progress}>
-					Behalten Sie jederzeit den Überblick über Mietzinseinanhmen, Investitionen und Renditen – bequem und ohne Aufwand. Alle Finanzkennzahlen Ihrer Liegenschaften sind in
-					Echtzeit verfügbar, grafisch aufbereitet und bereit zum Export. Bilanz, Erfolgsrechnung, Saldolisten und Mieterspiegel stehen auf Knopfdruck bereit.
+					Behalten Sie jederzeit den Überblick über Mietzinseinnahmen, Investitionen und Renditen – bequem und ohne Aufwand. Alle Finanzkennzahlen Ihrer Liegenschaften sind in
+					Echtzeit verfügbar, grafisch aufbereitet und bereit zum Export. Bilanz, Erfolgsrechnung, Saldolisten oder Mieterspiegel stehen auf Knopfdruck bereit.
 				</AccordionContent>
 			</AccordionItem>
 			<AccordionItem value="item-5" className={cn('w-full', accordionItem === 'item-5' && progress < 100 && 'pointer-events-none')}>

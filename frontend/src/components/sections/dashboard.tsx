@@ -11,16 +11,16 @@ const DashboardSection: React.FC = () => {
 				<div className="flex-1">
 					<H1 className="mb-4  leading-14 xs:leading-11">Immobilien Cockpit – Ihre Daten immer griffbereit</H1>
 					<P className="text-neutral-500 mb-7 w-6/7 xs:w-full lg:w-full">
-						Mit unserem Eigentümerportal haben Sie jederzeit und von überall einfachen Zugang zu allen wesentlichen Informationen Ihrer Liegenschaft – von Mietzinseinnahmen und
-						Leerstandübersichten bis hin zu Mieterwechseln und Handwerkerofferten, alles zentral und effizient gebündelt.
+						Mit unserem Eigentümerportal haben Sie jederzeit und von überall Zugang zu allen wesentlichen Informationen Ihrer Liegenschaft – von Mietzinseinnahmen und
+						Leerstandsübersichten bis hin zu Mieterwechseln und Handwerkerofferten, alles zentral und effizient gebündelt.
 					</P>
 					<div className="ml-3 xs:mb-12 ">
 						<div className="space-y-4 xs:space-y-3">
 							{[
 								'Historie aller Aktivitäten rund um Ihre Immobilie',
-								'Übersicht über alle relevante Finanzen & Kennzahlen',
+								'Übersicht über alle relevante Kennzahlen',
 								'Einblick in Leerstände und Immobilienwert',
-								'Information zu Mieterwechseln und Sanierungsprojekten',
+								'Informationen zu Mieterwechseln und Sanierungsprojekten',
 							].map((item, index) => (
 								<div key={index} className="flex items-start gap-3 ">
 									<CircleCheck className="text-white min-w-[20px] xs:mt-1 " fill="#E47839" size={20} />
