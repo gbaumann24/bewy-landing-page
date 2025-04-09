@@ -66,7 +66,7 @@ export default function Kontakt() {
 					</Button>
 				</Link>
 				<H1 className="text-4xl font-bold text-start mb-2">Kontakt</H1>
-				<P className="text-muted-foreground mb-8">Haben Sie Fragen oder benötigen Sie Unterstützung? Kontaktieren Sie uns über das Formular oder die untestehnde E-Mail Adresse.</P>
+				<P className="text-muted-foreground mb-8">Haben Sie Fragen oder benötigen Sie Unterstützung? Kontaktieren Sie uns über das Formular oder die untenstehende E-Mail Adresse.</P>
 
 				<div className="grid gap-8 mx-auto ">
 					{/* Contact Form */}

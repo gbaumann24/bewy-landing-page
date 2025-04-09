@@ -83,7 +83,7 @@ export function BroschureApply() {
 						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 					}`}
 				>
-					<ButtonText>{isSubmitting ? 'Wird gesendet...' : 'Brochüre anfordern'}</ButtonText>
+					<ButtonText>{isSubmitting ? 'Wird gesendet...' : 'Broschüre anfordern'}</ButtonText>
 				</button>
 			</form>
 			{error && <p className="text-red-500 text-sm mt-1 xs:hidden">{error}</p>}
