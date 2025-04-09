@@ -7,6 +7,8 @@ import { sendContactEmail, sendTrackingEmail } from './mailer';
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
+app.set('trust proxy', true);
+
 app.use(express.json());
 
 let db: any;
