@@ -32,6 +32,8 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
+	const [scrollingDown, setScrollingDown] = useState(false);
+	const [lastScrollY, setLastScrollY] = useState(0);
 	const { scrollY } = useScroll();
 	const [items, setItems] = useState(itemsinits);
 
@@ -43,12 +45,22 @@ const Navbar: React.FC<NavbarProps> = ({
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setScrolled(window.scrollY > 20);
+			const currentScrollY = window.scrollY;
+			setScrolled(currentScrollY > 20);
+
+			// Determine scroll direction
+			if (currentScrollY > lastScrollY) {
+				setScrollingDown(true);
+			} else {
+				setScrollingDown(false);
+			}
+
+			setLastScrollY(currentScrollY);
 		};
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [lastScrollY]);
 
 	// Fix for isActive logic
 	useEffect(() => {
@@ -70,6 +82,9 @@ const Navbar: React.FC<NavbarProps> = ({
 		setIsOpen(false);
 	};
 
+	// Calculate nav visibility based on scroll direction
+	const navbarVisible = !scrollingDown || isOpen || window.scrollY < 50;
+
 	return (
 		<>
 			<motion.nav
@@ -83,6 +98,13 @@ const Navbar: React.FC<NavbarProps> = ({
 					borderRadius,
 				}}
 				initial={false}
+				animate={{
+					top: navbarVisible ? 0 : -100,
+					opacity: navbarVisible ? 1 : 0,
+				}}
+				transition={{
+					duration: 0.3,
+				}}
 			>
 				<motion.div className="container mx-auto px-4 " style={{ scale: scrolled ? scale : 1 }}>
 					<div className="flex w-full rounded-none justify-between items-center py-3">
