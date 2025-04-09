@@ -3,10 +3,14 @@ import { Card } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Impressum: React.FC = () => {
 	return (
 		<>
+			<Helmet>
+				<meta name="robots" content="noindex, nofollow" />
+			</Helmet>
 			<Link to="/">
 				<Button className=" fixed top-12 left-12 cursor-pointer" size={'lg'}>
 					Zurück

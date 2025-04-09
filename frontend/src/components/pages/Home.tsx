@@ -10,6 +10,7 @@ import Footer from '@/components/sections/footer';
 import Pricing from '@/components/sections/pricing';
 import { useState, useEffect } from 'react';
 import FeatureMobileSection from '@/components/sections/feature-mobile';
+import { Helmet } from 'react-helmet';
 
 const Home: React.FC = () => {
 	const [view, setView] = useState('home');
@@ -50,42 +51,104 @@ const Home: React.FC = () => {
 	}, [activeView]);
 
 	return (
-		<div className='xs:overflow-x-clip'>
-			<Navbar setView={setView} activeView={activeView} />
+		<div className="xs:overflow-x-clip">
+			<Helmet>
+				<title>Bewy - Professionelle Immobilienbewirtschaftung für Stockwerkeigentum</title>
+				<meta
+					name="description"
+					content="Bewy bietet moderne Lösungen für die Verwaltung von Mietliegenschaften und Stockwerkeigentum mit digitaler Transparenz und individuellem Service."
+				/>
+				<link rel="canonical" href="https://www.bewy.ch" />
 
-			<section className="home flex w-full h-fit items-center justify-center">
-				<HeroSection />
-			</section>
-			<section className=" flex w-full h-fit items-center justify-center">
-				<ValuesSection />
-			</section>
-			<section>
-				<MessageSection />
-			</section>
-			<section className="portal relative overflow-x-clip">
-				<DashboardSection />
-				<div className="lg:block hidden">
-					<FeatureMobileSection />
-				</div>
-				<div className="block lg:hidden">
-					<FeatureSection />
-				</div>
-			</section>
-			<section className="overflow-clip ">
-				<CTA />
-			</section>
-			<section className="onboarding">
-				<OnboardingSection />
-			</section>
-			<section className="pricing">
-				<Pricing />
-			</section>
-			<section>
+				{/* Keywords */}
+				<meta name="keywords" content="Immobilienbewirtschaftung, Stockwerkeigentum, Mietliegenschaften, digitale Immobilienverwaltung, Eigentümerportal" />
+
+				{/* Language */}
+				<meta property="og:locale" content="de_CH" />
+				<html lang="de" />
+			</Helmet>
+
+			<header>
+				<Navbar setView={setView} activeView={activeView} />
+			</header>
+
+			<main id="main-content">
+				<section className="home flex w-full h-fit items-center justify-center" aria-labelledby="hero-heading">
+					<HeroSection />
+				</section>
+
+				<section className="values flex w-full h-fit items-center justify-center" aria-labelledby="values-heading">
+					<ValuesSection />
+				</section>
+
+				<section className="message" aria-labelledby="message-heading">
+					<MessageSection />
+				</section>
+
+				<section className="portal relative overflow-x-clip" aria-labelledby="portal-heading">
+					<DashboardSection />
+					<div className="lg:block hidden">
+						<FeatureMobileSection />
+					</div>
+					<div className="block lg:hidden">
+						<FeatureSection />
+					</div>
+				</section>
+
+				<section className="cta overflow-clip" aria-labelledby="cta-heading">
+					<CTA />
+				</section>
+
+				<section className="onboarding" aria-labelledby="onboarding-heading">
+					<OnboardingSection />
+				</section>
+
+				<section className="pricing" aria-labelledby="pricing-heading">
+					<Pricing />
+				</section>
+			</main>
+
+			<footer>
 				<Footer />
-			</section>
+			</footer>
 
-			{/* Cookie Consent Banner */}
-			{/* <CookieConsent /> */}
+			{/* Schema.org structured data */}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'Organization',
+						name: 'Bewy Immobilienbewirtschaftung AG',
+						url: 'https://www.bewy.ch',
+						mainEntity: {
+							'@type': 'Organization',
+							name: 'Bewy Immobilienbewirtschaftung',
+							email: 'info@bewy.ch',
+							contactPoint: {
+								'@type': 'ContactPoint',
+								contactType: 'customer service',
+								email: 'info@bewy.ch',
+								availableLanguage: ['German'],
+							},
+							sameAs: ['https://www.linkedin.com/company/bewy', 'https://www.facebook.com/bewyimmobilien'],
+						},
+						logo: 'https://www.bewy.ch/assets/logo-full.webp',
+						description: 'Professionelle Immobilienbewirtschaftung für Mietliegenschaften & Stockwerkeigentum mit digitaler Transparenz und individueller Betreuung.',
+						address: {
+							'@type': 'PostalAddress',
+							addressCountry: 'CH',
+							addressLocality: 'Schweiz',
+						},
+						sameAs: ['https://www.linkedin.com/company/bewy', 'https://www.facebook.com/bewyimmobilien'],
+						offers: {
+							'@type': 'Offer',
+							name: 'Immobilienbewirtschaftung',
+							description: 'Moderne Immobilienbewirtschaftung von Stockwerkeigentum und Mietliegenschaften',
+						},
+					}),
+				}}
+			/>
 		</div>
 	);
 };
