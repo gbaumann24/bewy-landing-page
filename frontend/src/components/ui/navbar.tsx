@@ -137,8 +137,8 @@ const Navbar: React.FC<NavbarProps> = ({
 							))}
 							<Link to="/kontakt">
 								<button
-									className={`text-[15px] px-10 h-11 cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors ${
-										scrolled ? 'rounded-full' : 'rounded-xl'
+									className={`text-[15px] px-10 h-10 cursor-pointer bg-secondary text-white hover:bg-secondary/90 transition-colors ${
+										scrolled ? 'rounded-full' : 'rounded-lg'
 									}`}
 								>
 									<ButtonText>Kontakt</ButtonText>

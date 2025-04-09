@@ -53,7 +53,7 @@ const Home: React.FC = () => {
 	return (
 		<div className="xs:overflow-x-clip">
 			<Helmet>
-				<title>Bewy - Professionelle Immobilienbewirtschaftung für Stockwerkeigentum</title>
+				<title>Bewy - Die neue Generation der Immobilien Bewirtschaftung</title>
 				<meta
 					name="description"
 					content="Bewy bietet moderne Lösungen für die Verwaltung von Mietliegenschaften und Stockwerkeigentum mit digitaler Transparenz und individuellem Service."
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
 							sameAs: ['https://www.linkedin.com/company/bewy', 'https://www.facebook.com/bewyimmobilien'],
 						},
 						logo: 'https://www.bewy.ch/assets/logo-full.webp',
-						description: 'Professionelle Immobilienbewirtschaftung für Mietliegenschaften & Stockwerkeigentum mit digitaler Transparenz und individueller Betreuung.',
+						description: 'Die neue Generation der Immobilien Bewirtschaftung',
 						address: {
 							'@type': 'PostalAddress',
 							addressCountry: 'CH',

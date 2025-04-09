@@ -13,14 +13,14 @@ const MessageSection: React.FC = () => {
 					<TextGenerateEffect
 						words={wordsDesktop}
 						className="text-7xl xs:text-4xl lg:text-6xl tracking-tight absolute inset-0  xs:text-left font-bold  flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
-						duration={0.5}
+						duration={0.4}
 					/>
 				</div>
 				<div className="hidden xs:block">
 					<TextGenerateEffect
 						words={wordsMobile}
 						className="xs:text-5xl tracking-tight absolute inset-0 xs:text-center font-bold flex items-center justify-center xs:justify-start xs:px-3 text-center text-white px-18 dark shadow-md"
-						duration={0.2}
+						duration={0.4}
 					/>
 				</div>
 			</div>

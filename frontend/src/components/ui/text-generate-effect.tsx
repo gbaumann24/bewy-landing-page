@@ -19,13 +19,13 @@ export const TextGenerateEffect = ({ words, className, filter = true, duration =
 						},
 						{
 							duration: duration ? duration : 1,
-							delay: stagger(0.3),
+							delay: stagger(0.25),
 						}
 					);
 					observer.disconnect();
 				}
 			},
-			{ threshold: 0.7 } // Text is 70% visible before animation starts
+			{ threshold: 0.4 } // Text is 70% visible before animation starts
 		);
 
 		if (scope.current) {
