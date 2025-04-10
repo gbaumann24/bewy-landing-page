@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 export const Footer: React.FC = () => {
 	return (
 		<footer className="container mx-auto flex items-center justify-center bg-white rounded-lg  mb-4">
-			<div className="w-full p-12 xs:px-6 xs:py-12 bg-neutral-700 rounded-lg">
-				<div className="flex flex-row items-center justify-between xs:flex-col xs:items-start">
+			<div className="w-full p-12 md:px-6 xs:py-12 bg-neutral-700 rounded-lg">
+				<div className="flex flex-row items-center justify-between lg:flex-col xs:items-start lg:gap-12 xs:gap-4">
 					<div>
 						<a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse xs:mb-6">
 							<img src="/assets/logo-invert.webp" className="h-20" alt="Your Logo" />
@@ -15,10 +15,10 @@ export const Footer: React.FC = () => {
 						{/* <Linkedin color="white" /> */}
 						<P className="text-xs mt-6 text-accent xs:mb-6">Die modernste Immobilien Bewirtschaftung der Schweiz.</P>
 					</div>
-					<div className="flex flex-col  items-start gap-3 text-sm xs:items-start xs:gap-2">
+					<div className="flex flex-col items-start gap-3 text-sm xs:items-start xs:gap-2">
 						<H4 className="text-white">Standorte</H4>
 
-						<div className="text-muted flex flex-row xs:flex-col items-center xs:items-start gap-13 xs:gap-4">
+						<div className="text-muted flex flex-row xs:flex-col items-center xs:items-start gap-13 md:gap-4">
 							<div className="flex flex-row items-center gap-1">
 								<MapPinCheckInside size={15} color="#E47839"  className="self-start mt-1" />
 								<div className="text-xs leading-6">
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
 					</div>
 				</div>
 				<hr className="border-gray-200 my-8" />
-				<div className="w-full flex flex-row items-center justify-between xs:flex-col xs:items-start xs:gap-4">
+				<div className="w-full flex flex-row items-center justify-between md:flex-col xs:items-start md:gap-4">
 					<div>
 						<span className="block text-xs text-white sm:text-left sm:mb-0">
 							© {new Date().getFullYear()}{' '}

@@ -7,7 +7,7 @@ const CTA: React.FC = () => {
 	return (
 		<div className="container mx-auto">
 			<div className="relative px-12 lg:px-5 bg-secondary rounded-xl mx-auto h-85 flex lg:h-fit lg:flex-col lg:py-14 items-center justify-center gap-24 lg:gap-14 overflow-clip z-20">
-				<img src="assets/pattern-3.webp" alt="" className="absolute -right-20 h-full object-cover opacity-80 scale-150 lg:opacity-40  overflow-visible " />
+				<img src="assets/pattern-3.webp" alt="" className="absolute -right-20 h-full object-cover opacity-80 scale-180 lg:opacity-40  overflow-visible " />
 
 				{/* Left Column - Image */}
 				<div className="flex z-10 flex-col items-start w-full">
