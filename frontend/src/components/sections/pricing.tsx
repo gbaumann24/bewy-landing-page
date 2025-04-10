@@ -114,7 +114,7 @@ const Pricing: React.FC = () => {
 						title="Komfort"
 						description="Erweiterte Betreuung mit mehr Mitbestimmungsmöglichkeiten."
 						price="75"
-						vorOrt={['Wie bei Kompakt', '1x 1-2h Jahresanalyse pro Eigentümer']}
+						vorOrt={['Wie bei Basis', '1x 1-2h Jahresanalyse pro Eigentümer']}
 						mieterkommunikation={['Wie bei Komfort']}
 						portal={['Uneingeschränkter Zugriff']}
 						mieterHandwerkerWahl={['Optional: Bestimmung von Handwerkern']}

@@ -1,4 +1,5 @@
 import { ButtonText } from '@/lib/typography';
+import { ArrowUpRight } from 'lucide-react';
 import { FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -79,11 +80,13 @@ export function BroschureApply() {
 				<button
 					type="submit"
 					disabled={isSubmitting}
-					className={`cursor-pointer flex bg-secondary border border-secondary hover:bg-secondary/90 hover:border-secondary/90 items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-r-xl ${
+					className={`cursor-pointer flex bg-secondary border border-secondary hover:bg-[#d36c30] hover:border-[#d36c30] items-center gap-2 px-6 py-3 text-white whitespace-nowrap rounded-r-xl ${
 						isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 					}`}
 				>
-					<ButtonText>{isSubmitting ? 'Wird gesendet...' : 'Broschüre anfordern'}</ButtonText>
+					<ButtonText className="flex items-center">
+						{isSubmitting ? 'Wird gesendet...' : 'Broschüre anfordern'} <ArrowUpRight size={19} className="ml-1" />
+					</ButtonText>
 				</button>
 			</form>
 			{error && <p className="text-red-500 text-sm mt-1 xs:hidden">{error}</p>}
@@ -112,7 +115,9 @@ export function BroschureApply() {
 							isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
 						}`}
 					>
-						<ButtonText className="text-md">Kontaktieren Sie uns</ButtonText>
+						<ButtonText className="text-md flex items-center">
+							Kontakt aufnehmen <ArrowUpRight size={19} className="ml-1" />
+						</ButtonText>
 					</button>
 				</Link>
 			</form>

@@ -127,7 +127,7 @@ const Navbar: React.FC<NavbarProps> = ({
 						<div className="flex-shrink-0">
 							{logo || (
 								<a href="/">
-									<img src="/assets/logo-full.webp" alt="Logo" className="h-8 w-auto" />
+									<img src="/assets/logo-full.svg" alt="Logo" className="h-8 w-auto" />
 								</a>
 							)}
 						</div>
