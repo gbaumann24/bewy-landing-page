@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
 			<GridBackground />
 
 			{/* Left Column - Content */}
-			<div className="relative z-10 flex-1 w-full lg:pt-34">
+			<div className="relative z-10 flex-1 w-full lg:pt-24">
 				<div className="flex gap-2 px-4 xs:px-3 py-1 items-center bg-accent border border-neutral-300 w-fit rounded-full text-sm xs:text-xs mb-4 ">
 					<HandHeart className=" w-4 h-4" />
 					<span>Mietliegenschaften & Stockwerkeigentum</span>
@@ -105,7 +105,7 @@ const HeroSection: React.FC = () => {
 						<motion.img
 							src="/assets/hero-1.webp"
 							alt="Overlay 1"
-							className="absolute -top-[3%] left-1/2 -translate-x-5/6 flex items-center justify-center gap-4 xs:w-50 lg:w-60 shadow-md rounded-2xl"
+							className="absolute -top-[3%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 xs:w-50 lg:w-60 shadow-md rounded-2xl"
 							initial={{ y: 50, opacity: 0 }}
 							whileInView={{ y: [-2, 2, -2], opacity: 1 }}
 							transition={{
@@ -131,7 +131,7 @@ const HeroSection: React.FC = () => {
 						<motion.img
 							src="/assets/hero-2-mobile.webp"
 							alt="Overlay 1"
-							className="absolute -bottom-[3%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-4/5 max-w-100 shadow-md rounded-2xl"
+							className="absolute -bottom-[3%] left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-6/7 max-w-100 shadow-md rounded-2xl"
 							initial={{ y: 50, opacity: 0 }}
 							whileInView={{ y: [-2, 2, -2], opacity: 1 }}
 							transition={{
